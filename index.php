@@ -5,7 +5,7 @@
 <br>
 <br>
 <h1>HELLO WORLD</h1>
-<a href="/rent">LINK TO THE RENT PAGE</a>
+<a href="<?php echo site_url('/rent') ?>">LINK TO THE RENT PAGE</a>
 <br>
 <br>
 <br>
