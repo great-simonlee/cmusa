@@ -157,7 +157,7 @@
 <section class="main-rm">
   <p class="main-front-title">找室友/找合租</p>
   <p class="main-front-subtitle">ROOMMATE</p>
-  <a href="/roommate">
+  <a href="<?php echo site_url('/roommate') ?>">
     <div class="main-rm-banner">
       <div class="main-rm-txt">
         <p>想找志同道合的人一起合租？</p>
