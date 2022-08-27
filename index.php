@@ -5,6 +5,7 @@
 <br>
 <br>
 <h1>HELLO WORLD</h1>
+<a href="/rent">LINK TO THE RENT PAGE</a>
 <br>
 <br>
 <br>
