@@ -11,19 +11,19 @@
                     <div class="footer-list-container">
                         <ul>
                             <li><b>关于公司</b></li>
-                            <li><a href="/aboutus">关于我们</a></li>
-                            <li><a href="">联系我们</a></li>
-                            <li><a href="/team">加入我们</a></li>
+                            <li><a href="<?php echo site_url('/about') ?>">关于我们</a></li>
+                            <li><a href="<?php echo site_url('/') ?>">联系我们</a></li>
+                            <li><a href="<?php echo site_url('/team') ?>">加入我们</a></li>
                         </ul>
                         <ul>
                             <li><b>地产服务</b></li>
-                            <li><a href="/rent">租房信息</a></li>
-                            <li><a href="/roommate">室友服务</a></li>
+                            <li><a href="<?php echo site_url('/rent') ?>">租房信息</a></li>
+                            <li><a href="<?php echo site_url('/roommate') ?>">室友服务</a></li>
                         </ul>
                         <ul>
                             <li><b>其他信息</b></li>
-                            <li><a href="">常见问题</a></li>
-                            <li><a href="">买房咨询</a></li>
+                            <li><a href="<?php echo site_url('/') ?>">常见问题</a></li>
+                            <li><a href="<?php echo site_url('/') ?>">买房咨询</a></li>
                         </ul>
                     </div>
                 </div>

@@ -12,12 +12,12 @@
         <section class="gnav-bar">
           <a href="<?php echo site_url('/') ?>" class="gnav-title"><img class="gnav-logo" src="<?php echo get_theme_file_uri('/assets/img/logo/china moves logo(white w_ trans)_937x97.png') ?>" alt="ChinaMovesUSA"></a>
           <ul class="gnav-ul">
-            <li><a href="/">首页</a></li>
-            <li><a href="/rent">租房</a></li>
-            <li><a href="/roommate">找室友</a></li>
-            <li><a href="/team">团队</a></li>
-            <li><a href="/aboutus">关于我们</a></li>
-            <li><a href="/register">发布房源</a></li>
+            <li><a href="<?php echo site_url('/') ?>">首页</a></li>
+            <li><a href="<?php echo site_url('/rent') ?>">租房</a></li>
+            <li><a href="<?php echo site_url('/roommate') ?>">找室友</a></li>
+            <li><a href="<?php echo site_url('/team') ?>">团队</a></li>
+            <li><a href="<?php echo site_url('/aboutus') ?>">关于我们</a></li>
+            <li><a href="<?php echo site_url('/register') ?>">发布房源</a></li>
           </ul>
           <div class="login-signup" id="signUpLogInDiv">
             <a href="/member-login">登陆</a>
