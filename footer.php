@@ -1,0 +1,1 @@
+<h1 style="background-color: green">THIS IS FOOTER</h1>
