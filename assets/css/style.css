@@ -3,3 +3,19 @@
 @import './base/color.css';
 @import './base/display.css';
 @import './base/font.css';
+
+/* Module */
+@import './module/module-header.css';
+@import './module/module-footer.css';
+
+/* Page */
+@import './page/page-front-page.css';
+@import './page/page-rent.css';
+@import './page/page-member.css';
+@import './page/page-roommate.css';
+@import './page/page-team.css';
+@import './page/page-aboutus.css';
+@import './page/page-register.css';
+@import './page/page-detail.css';
+@import './page/page-mobile.css';
+@import './page/page-mypage.css';

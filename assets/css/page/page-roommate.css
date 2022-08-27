@@ -1,0 +1,376 @@
+.rm-question-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1080px;
+  height: 300px;
+  margin: 36px 0;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.rm-question-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.rm-question-subtitle {
+  font-size: 20px;
+}
+.rmq-subtitle {
+  font-size: 20px;
+}
+
+.rmq-next-btn {
+  width: 240px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  background-color: #f78915;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.rmq-next-btn:hover {
+  color: #f78915;
+  background-color: #fff;
+}
+
+.rm-desc-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.rm-desc-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 24px;
+}
+
+.rm-desc-text {
+  font-size: 24px;
+}
+
+.rmq-input-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rmq-input {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: #fff 1px solid;
+  border-radius: 12px;
+  padding: 0 12px;
+  color: #fff;
+}
+
+.rmq-input:focus {
+  outline: none;
+  background-color: #000;
+}
+
+/* Cell phone */
+@media (min-width: 200px) {
+}
+/* Tablets */
+@media (min-width: 768px) {
+  .rm-question-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 160px;
+    margin: 20px 0;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+
+  .rm-question-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .rm-question-subtitle {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .rmq-subtitle {
+    font-size: 12px;
+  }
+
+  .rmq-next-btn {
+    width: 120px;
+    height: 24px;
+    font-size: 12px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 24px;
+    color: #fff;
+    background-color: #f78915;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .rmq-next-btn:hover {
+    color: #f78915;
+    background-color: #fff;
+  }
+
+  .rm-desc-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+  }
+
+  .rm-desc-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+
+  .rm-desc-text {
+    font-size: 16px;
+  }
+
+  .rmq-input-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .rmq-input {
+    width: 200px;
+    height: 28px;
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 12px;
+    padding: 0 12px;
+    color: #fff;
+  }
+
+  .rmq-input:focus {
+    outline: none;
+    background-color: #000;
+  }
+
+  .rmq-radio-box {
+    display: flex;
+  }
+
+  .rm-radio-btn {
+    display: none;
+  }
+
+  .rm-radio-label {
+    border: #fff 1px solid;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .rm-radio-label:hover {
+    background-color: #444444;
+  }
+
+  .rm-radio-btn:checked ~ .rm-radio-label {
+    background-color: #fff;
+    color: #000;
+  }
+}
+/* MacBook Pro */
+@media (min-width: 1024px) {
+  .rm-question-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 200px;
+    margin: 20px 0;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+
+  .rm-question-title {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .rm-question-subtitle {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  .rmq-subtitle {
+    font-size: 16px;
+  }
+
+  .rmq-next-btn {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 24px;
+    color: #fff;
+    background-color: #f78915;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .rmq-next-btn:hover {
+    color: #f78915;
+    background-color: #fff;
+  }
+
+  .rm-desc-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+  }
+
+  .rm-desc-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+  }
+
+  .rm-desc-text {
+    font-size: 20px;
+  }
+
+  .rmq-input-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .rmq-input {
+    width: 240px;
+    height: 32px;
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 16px;
+    padding: 0 12px;
+    color: #fff;
+  }
+
+  .rmq-input:focus {
+    outline: none;
+    background-color: #000;
+  }
+
+  .rm-radio-label {
+    border: #fff 1px solid;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    font-size: 16px;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1440px) {
+  .rm-question-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 300px;
+    margin: 36px 0;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+
+  .rm-question-title {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .rm-question-subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .rmq-subtitle {
+    font-size: 20px;
+  }
+
+  .rmq-next-btn {
+    width: 240px;
+    height: 48px;
+    font-size: 18px;
+    border: none;
+    border-radius: 24px;
+    color: #fff;
+    background-color: #f78915;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .rmq-next-btn:hover {
+    color: #f78915;
+    background-color: #fff;
+  }
+
+  .rm-desc-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+  }
+
+  .rm-desc-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+  }
+
+  .rm-desc-text {
+    font-size: 24px;
+  }
+
+  .rmq-input-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .rmq-input {
+    width: 320px;
+    height: 40px;
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 12px;
+    padding: 0 12px;
+    color: #fff;
+  }
+
+  .rmq-input:focus {
+    outline: none;
+    background-color: #000;
+  }
+
+  .rm-radio-label {
+    border: #fff 1px solid;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-left: 16px;
+    font-size: 20px;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1920px) {
+}

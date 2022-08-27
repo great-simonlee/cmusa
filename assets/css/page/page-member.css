@@ -1,0 +1,671 @@
+.resetPWbtn {
+  cursor: pointer;
+}
+
+.resetPWbtn:hover {
+  text-decoration: underline;
+}
+
+.backToLogIn {
+  color: #fff;
+  cursor: pointer;
+}
+
+.backToLogIn:hover {
+  text-decoration: underline;
+}
+
+/* Cell phone */
+@media (min-width: 200px) {
+  .mBody {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+  }
+
+  .mBody-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgb(0, 0, 0, 0.95);
+  }
+
+  .mBody-cont > h2 {
+    visibility: hidden;
+  }
+
+  .mBody-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75vw;
+    height: 32px;
+    padding: 4px 16px;
+    margin-bottom: 20px;
+    border: #fff 1px solid;
+    border-radius: 20px;
+  }
+
+  .mBody-info-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mBody-info-input {
+    width: 59vw;
+    height: 28px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    background-color: transparent;
+  }
+
+  .mBody-info-input::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .mBody-info-input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input:focus {
+    outline: none;
+    border: none;
+  }
+
+  .mBody-ua-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mBody-ua-checkmark {
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+  }
+
+  #userAgreement {
+    display: none;
+  }
+
+  .mBody-ua-checkmark {
+    border: 2px #f78915 solid;
+    border-radius: 50%;
+  }
+
+  .mBody-ua-container:hover .mBody-ua-checkmark {
+    background-color: #ccc;
+  }
+
+  #userAgreement:checked + .mBody-ua-checkmark {
+    background-image: url('../../img/icon/selected.png');
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+  }
+
+  .pw-re {
+    display: flex;
+    color: #fff;
+  }
+
+  .pw-re > a {
+    color: #fff;
+  }
+
+  .mBody-ban-cont {
+    display: none;
+  }
+
+  .mBody-google {
+    width: 60vw;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .m-google-login {
+    margin-top: 200px;
+  }
+
+  .mBody-signup-btn {
+    width: 50vw;
+    height: 32px;
+    margin-top: 32px;
+    padding: 4px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f78915;
+    color: #fff;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .mBody-signup-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+}
+/* Tablets */
+@media (min-width: 768px) {
+  .mBody-ban-cont {
+    display: flex;
+  }
+  .mBody {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 72vh;
+  }
+
+  .mBody-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 72vh;
+    background-color: rgb(0, 0, 0, 0.95);
+  }
+
+  .mBody-cont > h2 {
+    visibility: visible;
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .mBody-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 4px 24px;
+    margin-bottom: 16px;
+    border: #fff 1px solid;
+    border-radius: 20px;
+  }
+
+  .mBody-info-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mBody-info-input {
+    width: 240px;
+    height: 28px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    background-color: transparent;
+  }
+
+  .mBody-info-input::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .mBody-info-input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input:focus {
+    outline: none;
+    border: none;
+  }
+
+  .mBody-ua-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .mBody-ua-checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+  }
+
+  #userAgreement {
+    display: none;
+  }
+
+  .mBody-ua-checkmark {
+    border: 2px #f78915 solid;
+    border-radius: 50%;
+  }
+
+  .mBody-ua-container:hover .mBody-ua-checkmark {
+    background-color: #ccc;
+  }
+
+  #userAgreement:checked + .mBody-ua-checkmark {
+    background-image: url('../../img/icon/selected.png');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+
+  .pw-re {
+    display: flex;
+    color: #fff;
+  }
+
+  .pw-re > a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+  }
+
+  .mBody-google {
+    width: 60vw;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .m-google-login {
+    margin-top: 80px;
+  }
+
+  .mBody-signup-btn {
+    width: 240px;
+    height: 40px;
+    margin-top: 12px;
+    padding: 4px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f78915;
+    color: #fff;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .mBody-signup-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .mBody-ban-cont {
+    position: relative;
+    width: 50vw;
+    height: 72vh;
+    background-color: blueviolet;
+  }
+
+  .mBody-ban-img {
+    width: 50vw;
+    height: 72vh;
+    object-fit: cover;
+  }
+
+  .mBody-ban-text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+    position: absolute;
+    color: #fff;
+    text-shadow: 2px 2px #555;
+    top: 0;
+    width: 50vw;
+    height: 72vh;
+    padding-right: 56px;
+    cursor: default;
+  }
+
+  .mBody-ban-text > p {
+    font-family: lato;
+    font-size: 48px;
+    font-weight: 900;
+  }
+}
+/* MacBook Pro */
+@media (min-width: 1024px) {
+  .mBody {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 72vh;
+  }
+
+  .mBody-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 72vh;
+    background-color: rgb(0, 0, 0, 0.95);
+  }
+
+  .mBody-cont > h2 {
+    visibility: visible;
+    margin-bottom: 32px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .mBody-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 4px 16px;
+    margin-bottom: 32px;
+    border: #fff 1px solid;
+    border-radius: 20px;
+  }
+
+  .mBody-info-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mBody-info-input {
+    width: 240px;
+    height: 28px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
+  }
+
+  .mBody-info-input::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .mBody-info-input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input:focus {
+    outline: none;
+    border: none;
+  }
+
+  .mBody-ua-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .mBody-ua-checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+  }
+
+  #userAgreement {
+    display: none;
+  }
+
+  .mBody-ua-checkmark {
+    border: 2px #f78915 solid;
+    border-radius: 50%;
+  }
+
+  .mBody-ua-container:hover .mBody-ua-checkmark {
+    background-color: #ccc;
+  }
+
+  #userAgreement:checked + .mBody-ua-checkmark {
+    background-image: url('../../img/icon/selected.png');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+
+  .mBody-signup-btn {
+    width: 240px;
+    height: 40px;
+    margin-top: 32px;
+    padding: 4px 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f78915;
+    color: #fff;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .mBody-signup-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .mBody-ban-cont {
+    position: relative;
+    width: 50vw;
+    height: 72vh;
+    background-color: blueviolet;
+  }
+
+  .mBody-ban-img {
+    width: 50vw;
+    height: 72vh;
+    object-fit: cover;
+  }
+
+  .mBody-ban-text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+    position: absolute;
+    color: #fff;
+    text-shadow: 2px 2px #555;
+    top: 0;
+    width: 50vw;
+    height: 72vh;
+    padding-right: 56px;
+    cursor: default;
+  }
+
+  .mBody-ban-text > p {
+    font-family: lato;
+    font-size: 64px;
+    font-weight: 900;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1440px) {
+  .mBody {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 880px;
+  }
+
+  .mBody-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 880px;
+    background-color: rgb(0, 0, 0, 0.95);
+  }
+
+  .mBody-cont > h2 {
+    visibility: visible;
+    margin-bottom: 32px;
+    color: #fff;
+  }
+
+  .mBody-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 4px 16px;
+    margin-bottom: 32px;
+    border: #fff 1px solid;
+    border-radius: 20px;
+  }
+
+  .mBody-info-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mBody-info-input {
+    width: 240px;
+    height: 28px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
+  }
+
+  .mBody-info-input::placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .mBody-info-input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .mBody-info-input:focus {
+    outline: none;
+    border: none;
+  }
+
+  .mBody-ua-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mBody-ua-checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+  }
+
+  #userAgreement {
+    display: none;
+  }
+
+  .mBody-ua-checkmark {
+    border: 2px #f78915 solid;
+    border-radius: 50%;
+  }
+
+  .mBody-ua-container:hover .mBody-ua-checkmark {
+    background-color: #ccc;
+  }
+
+  #userAgreement:checked + .mBody-ua-checkmark {
+    background-image: url('../../img/icon/selected.png');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+
+  .mBody-signup-btn {
+    width: 240px;
+    height: 40px;
+    margin-top: 32px;
+    padding: 4px 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f78915;
+    color: #fff;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .mBody-signup-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .mBody-ban-cont {
+    position: relative;
+    width: 52%;
+    height: 880px;
+    background-color: blueviolet;
+  }
+
+  .mBody-ban-img {
+    width: 52vw;
+    height: 880px;
+    object-fit: cover;
+  }
+
+  .mBody-ban-text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+    position: absolute;
+    color: #fff;
+    text-shadow: 2px 2px #555;
+    top: 0;
+    width: 52vw;
+    height: 880px;
+    padding-right: 56px;
+    cursor: default;
+  }
+
+  .mBody-ban-text > p {
+    font-family: lato;
+    font-size: 120px;
+    font-weight: 900;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1920px) {
+}
+
+/* DEVICE VIEWPORT
+iPhone 12 Mini      360x780
+iPhone 12 & Pro     390x844
+iPhone 12 Max       428x926
+iPad Mini           768x1024
+iPad 10.2”          810x1080
+iPad Pro 11”        834x1194
+iPad Pro 12.9”     1024x1366
+MacBook Pro 13”    1280x800
+MacBook Pro 15”    1440x900
+MacBook Pro 16”    1536x960
+iMac 27"           2560x1440 */

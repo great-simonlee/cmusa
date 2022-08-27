@@ -1,0 +1,757 @@
+.rent-banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.rent-banner-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.rent-search {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.rent-search-input {
+  border: none;
+}
+
+.rent-search-input:focus {
+  border: none;
+  outline: none;
+}
+
+.rent-search-btn {
+  cursor: pointer;
+}
+
+.rent-banner-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.rent-sel-con {
+  display: flex;
+}
+
+.rent-sel-opt {
+  display: flex;
+  cursor: pointer;
+}
+
+.rent-sel-opt > p:hover {
+  color: #f78915;
+}
+
+.rent-order {
+  display: flex;
+  justify-content: center;
+  /* background-color: tomato; */
+}
+
+.rent-order-cont {
+  display: flex;
+  align-items: center;
+  /* background-color: azure; */
+}
+
+.rent-order-item {
+  display: flex;
+  align-items: center;
+}
+
+.rent-listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rent-listing-cont {
+  background-color: #fff;
+}
+
+.rentStickyEle {
+  position: fixed;
+}
+
+.rent-order-btn {
+  cursor: pointer;
+}
+
+.rent-order-btn:hover {
+  /* color: #f78915; */
+  border: #f78915 2px solid;
+}
+
+.page-number {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.page-number:hover {
+  color: #f78915;
+}
+
+.rent-listing-ls-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rent-listing-ls {
+  width: 540px;
+}
+
+/* Cell phone */
+@media (min-width: 200px) {
+}
+/* Tablets */
+@media (min-width: 768px) {
+  .rent-banner-container {
+    height: 400px;
+  }
+  .rent-banner-img {
+    height: 500px;
+  }
+
+  .rent-search {
+    width: 680px;
+    padding: 8px 12px 8px 16px;
+    border-radius: 24px;
+  }
+
+  .rent-search-mag {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rent-search-input {
+    width: 680px;
+    font-size: 12px;
+    padding-left: 8px;
+  }
+
+  .rent-search-btn {
+    border: none;
+    border-radius: 16px;
+    background-color: #f78915;
+    border: #f78915 1px solid;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    width: 64px;
+    transition: 200ms;
+  }
+
+  .rent-search-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .rent-sel-con {
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 20px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    width: 680px;
+  }
+
+  .rs-con-cat {
+    width: 10%;
+  }
+
+  .rs-con-cat > p {
+    margin: 8px 0;
+    font-size: 10px;
+  }
+
+  .rs-opt-cont {
+    width: 90%;
+  }
+
+  .rent-sel-opt {
+    margin: 8px 0;
+  }
+
+  .rent-sel-opt > p {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+
+  .rent-order {
+    margin: 4px 0;
+    padding: 0;
+    height: 60px;
+  }
+
+  .rent-order-cont {
+    width: 86vw;
+  }
+
+  .rent-order-item {
+    /* margin-right: 24px; */
+  }
+
+  .rent-order-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rent-listing-cont {
+    display: flex;
+    width: 86vw;
+  }
+
+  .rent-listing-card {
+    width: 66vw;
+    /* background-color: blue; */
+  }
+
+  .rl-card {
+    display: flex;
+    margin-bottom: 24px;
+    transition: 100ms;
+  }
+
+  .rl-card:hover {
+    border-radius: 16px;
+    background-color: rgb(0, 0, 0, 0.1);
+  }
+
+  .rl-card-cont {
+    position: relative;
+    height: 20vw;
+  }
+
+  .rl-card-img {
+    width: 28vw;
+    height: 20vw;
+    border-radius: 8px;
+    object-fit: cover;
+    background-image: url('/assets/img/logo/CM_loadingspinner.gif');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+  }
+
+  .rl-card-info {
+    width: 28vw;
+    height: 50px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    padding: 6px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 12px;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .rlc-info-text > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-info > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    justify-content: space-between;
+    color: #000;
+  }
+
+  .rl-card-desc > h4 {
+    font-size: 16px;
+  }
+
+  .rl-card-desc > div > p {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .rent-listing-map {
+    width: 20vw;
+    /* height: 200px; */
+    /* background-color: violet; */
+  }
+
+  .rent-listing-map-img {
+    /* position: fixed;
+    right: 0; */
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .rl-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 0 16px;
+    margin-top: 32px;
+    border-radius: 20px;
+    background-color: #000;
+  }
+
+  .rl-pagination-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rl-pagination-num {
+    display: flex;
+    color: #fff;
+  }
+
+  .rl-pagination-num > p {
+    font-weight: 700;
+    margin: 0 8px;
+  }
+}
+/* MacBook Pro */
+@media (min-width: 1024px) {
+  .rent-banner-container {
+    height: 400px;
+  }
+  .rent-banner-img {
+    height: 500px;
+  }
+
+  .rent-search {
+    width: 880px;
+    padding: 8px 12px 8px 16px;
+    border-radius: 24px;
+  }
+
+  .rent-search-mag {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rent-search-input {
+    width: 880px;
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  .rent-search-btn {
+    border: none;
+    border-radius: 16px;
+    background-color: #f78915;
+    border: #f78915 1px solid;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    width: 64px;
+    transition: 200ms;
+  }
+
+  .rent-search-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .rent-sel-con {
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 20px;
+    margin-top: 12px;
+    padding: 12px 20px;
+    width: 880px;
+  }
+
+  .rs-con-cat {
+    width: 10%;
+  }
+
+  .rs-con-cat > p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .rs-opt-cont {
+    width: 90%;
+  }
+
+  .rent-sel-opt {
+    margin: 8px 0;
+  }
+
+  .rent-sel-opt > p {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .rent-order {
+    margin: 4px 0;
+    padding: 0;
+    height: 60px;
+  }
+
+  .rent-order-cont {
+    width: 86vw;
+  }
+
+  .rent-order-item {
+    /* margin-right: 24px; */
+  }
+
+  .rent-order-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rent-listing-cont {
+    display: flex;
+    width: 86vw;
+  }
+
+  .rent-listing-card {
+    width: 66vw;
+    /* background-color: blue; */
+  }
+
+  .rl-card {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .rl-card-cont {
+    position: relative;
+    height: 200px;
+  }
+
+  .rl-card-img {
+    width: 22vw;
+    height: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .rl-card-info {
+    width: 22vw;
+    height: 60px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    padding: 12px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 12px;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .rlc-info-text > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-info > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    justify-content: space-between;
+  }
+
+  .rl-card-desc > h4 {
+    font-size: 20px;
+  }
+
+  .rl-card-desc > div > p {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .rent-listing-map {
+    width: 28vw;
+    /* height: 200px; */
+    /* background-color: violet; */
+  }
+
+  .rent-listing-map-img {
+    /* position: fixed;
+    right: 0; */
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .rl-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 0 16px;
+    margin-top: 32px;
+    border-radius: 20px;
+    background-color: #000;
+  }
+
+  .rl-pagination-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rl-pagination-num {
+    display: flex;
+    color: #fff;
+  }
+
+  .rl-pagination-num > p {
+    font-weight: 700;
+    margin: 0 8px;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1440px) {
+  .rent-banner-container {
+    height: 400px;
+  }
+  .rent-banner-img {
+    height: 500px;
+  }
+
+  .rent-search {
+    width: 1024px;
+    padding: 8px 12px 8px 16px;
+    border-radius: 24px;
+  }
+
+  .rent-search-mag {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rent-search-input {
+    width: 880px;
+    font-size: 16px;
+    padding-left: 8px;
+  }
+
+  .rent-search-btn {
+    border: none;
+    border-radius: 16px;
+    background-color: #f78915;
+    border: #f78915 1px solid;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    width: 64px;
+    transition: 200ms;
+  }
+
+  .rent-search-btn:hover {
+    background-color: #fff;
+    color: #f78915;
+  }
+
+  .rent-sel-con {
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 20px;
+    margin-top: 12px;
+    padding: 20px 32px;
+    width: 1214px;
+  }
+
+  .rs-con-cat {
+    width: 10%;
+  }
+
+  .rs-con-cat > p {
+    margin: 12px 0;
+    font-size: 16px;
+  }
+
+  .rs-opt-cont {
+    width: 90%;
+  }
+
+  .rent-sel-opt {
+    margin: 12px 0;
+  }
+
+  .rent-sel-opt > p {
+    font-weight: 100;
+    margin-right: 24px;
+    font-size: 16px;
+  }
+
+  .rent-order {
+    margin: 4px 0;
+    padding: 0 148px;
+    height: 60px;
+  }
+
+  .rent-order-cont {
+    width: 1214px;
+  }
+
+  .rent-order-item {
+    /* margin-right: 24px; */
+  }
+
+  .rent-order-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 
+  .rent-listing {
+    height: 320px;
+  } */
+
+  .rent-listing-cont {
+    display: flex;
+    width: 1214px;
+  }
+
+  .rent-listing-card {
+    width: 75%;
+    /* background-color: blue; */
+  }
+
+  .rl-card {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .rl-card-cont {
+    position: relative;
+    height: 200px;
+  }
+
+  .rl-card-img {
+    width: 360px;
+    height: 200px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .rl-card-info {
+    width: 360px;
+    height: 60px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    padding: 12px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 12px;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .rlc-info-text > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-info > p {
+    margin: 2px 0;
+  }
+
+  .rl-card-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    justify-content: space-between;
+  }
+
+  .rl-card-desc > h4 {
+    font-size: 20px;
+  }
+
+  .rl-card-desc > div > p {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .rent-listing-map {
+    width: 25%;
+    height: 640px;
+    /* height: 200px; */
+    /* background-color: violet; */
+  }
+
+  .rent-listing-map-img {
+    /* position: fixed;
+    right: 0; */
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .rl-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 40px;
+    padding: 0 16px;
+    margin-top: 32px;
+    border-radius: 20px;
+    background-color: #000;
+  }
+
+  .rl-pagination-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rl-pagination-num {
+    display: flex;
+    color: #fff;
+  }
+
+  .rl-pagination-num > p {
+    font-weight: 700;
+    margin: 0 8px;
+  }
+
+  .rent-listing-ls-cont {
+    height: 300px;
+  }
+
+  .rent-listing-ls {
+    width: 540px;
+    object-fit: cover;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1920px) {
+}
