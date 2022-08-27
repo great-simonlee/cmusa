@@ -20,8 +20,8 @@
             <li><a href="<?php echo site_url('/register') ?>">发布房源</a></li>
           </ul>
           <div class="login-signup" id="signUpLogInDiv">
-            <a href="/member-login">登陆</a>
-            <a href="/member-signup" class="gnav-signup">注册</a>
+            <a href="<?php echo site_url('/member-login') ?>">登陆</a>
+            <a href="<?php echo site_url('/member-signup') ?>" class="gnav-signup">注册</a>
           </div>
           <div class="user-menu-cont" id="userMenuDiv">
             <img class="user-menu" id="userMenu" src="<?php echo get_theme_file_uri('/assets/img/icon/userMenu.png') ?>">
