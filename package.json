@@ -1,0 +1,30 @@
+{
+  "name": "cmu",
+  "version": "1.0.0",
+  "description": "ChinaMovesUSA",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/great-simonlee/cmusa.git"
+  },
+  "author": "Simon Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/great-simonlee/cmusa/issues"
+  },
+  "homepage": "https://github.com/great-simonlee/cmusa#readme",
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "@wordpress/scripts": "^24.0.0",
+    "axios": "^0.27.2",
+    "googleapis": "^107.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}
