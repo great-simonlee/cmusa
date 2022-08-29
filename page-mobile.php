@@ -41,6 +41,9 @@
     <div class="mb-filter-item"><span>选择价位</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
   </div>
   <div class="mb-card-cont" id="mobileListingCont">
+    <div class="mb-front-ls-div" id="mobileFrontLoadingSpinnerDiv">
+      <img class="mb-front-ls" src="<?php echo get_theme_file_uri('/assets/img/logo/loadingListing.gif') ?>">
+    </div> 
     <!-- <div class="mb-card">
       <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing1.png') ?>" alt="ChinaMovesUSA">
       <div class="mb-card-desc">

@@ -29,12 +29,15 @@ if (window.location.pathname === '/mobile/') {
     NYRef.limit(10)
       .get()
       .then((res) => {
+        // Mobile LS Disappear
+        document.querySelector('#mobileFrontLoadingSpinnerDiv').style.display =
+          'none';
         res.docs.map((doc) => {
           console.log(doc.data());
           mobileListingCont.innerHTML += `
           <a class="mobileListingAnchor" href="/detail/?li=${doc.data().uid}${
             doc.data().writetime
-          }" target="blank">
+          }">
             <div class="mb-card">
               <img class="mb-card-img" src="https://drive.google.com/uc?export=view&id=${
                 doc.data().pictures[0]

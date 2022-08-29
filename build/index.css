@@ -6904,9 +6904,19 @@ iMac 27"           2560x1440 */
   margin-left: 4px;
 }
 
+.mb-front-ls-div {
+  width: 100vw;
+}
+
+.mb-front-ls {
+  width: 100%;
+  height: auto;
+}
+
 .mobileListingAnchor {
   color: #000;
 }
+
 .mb-card-cont {
   display: flex;
   flex-direction: column;

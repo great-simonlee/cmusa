@@ -39,15 +39,15 @@
             </div>
             <div class="dt-info-mob-text">
               <img class="dt-info-mob-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/calendar.png') ?>" alt="">
-              <p>入住时间：<span class="detailDate"></span></p>
+              <p>入住时间：<br><span class="detailDate"></span></p>
             </div>
             <div class="dt-info-mob-text">
               <img class="dt-info-mob-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/length.png') ?>" alt="">
-              <p>租期：<span class="detailLength"></span></p>
+              <p>租期：<br><span class="detailLength"></span></p>
             </div>
             <div class="dt-info-mob-text">
               <img class="dt-info-mob-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/broker.png') ?>" alt="">
-              <p>中介费：<span class="detailBroker"></span></p>
+              <p>中介费：<br><span class="detailBroker"></span></p>
             </div>
           </div>
           <button class="dt-info-btn">现在联系</button>
