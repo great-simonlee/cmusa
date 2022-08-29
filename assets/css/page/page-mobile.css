@@ -173,6 +173,9 @@
   margin-left: 4px;
 }
 
+.mobileListingAnchor {
+  color: #000;
+}
 .mb-card-cont {
   display: flex;
   flex-direction: column;

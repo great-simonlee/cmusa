@@ -40,8 +40,8 @@
     <div class="mb-filter-item"><span>选择区域</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
     <div class="mb-filter-item"><span>选择价位</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
   </div>
-  <div class="mb-card-cont">
-    <div class="mb-card">
+  <div class="mb-card-cont" id="mobileListingCont">
+    <!-- <div class="mb-card">
       <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing1.png') ?>" alt="ChinaMovesUSA">
       <div class="mb-card-desc">
         <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
@@ -88,7 +88,7 @@
         <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
         <p class="mbc-desc-price">$3000/月</p>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="m-footer">
     <div class="mf-menu-item">
