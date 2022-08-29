@@ -44,9 +44,20 @@
             <img class="mh-dtri-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri.png') ?>" alt="ChinaMovesUSA">
           </div>
           <a href="<?php echo site_url('/mobile') ?>"><img class="mh-logo-img" src="<?php echo get_theme_file_uri('/assets/img/logo/china moves logo(white w_ trans)_937x97.png') ?>" alt="ChinaMovesUSA"></a>
-          <div class="mh-menu">
+          <div class="mh-menu" id="mobileDropDownMenuIcon" menu-active="0">
             <img class="mh-menu-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-menu.png') ?>" alt="ChinaMovesUSA">
           </div>
+        </div>
+        <div class="mobile-dropdown-detail" id="mobile-dd-detail" style="display: none;">
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/member-login') ?>">登陆</a> / <a href="<?php echo site_url('/member-signup') ?>">注册</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/rent') ?>">租房</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/roommate') ?>">找室友</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/team') ?>">团队</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/aboutus') ?>">关于我们</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/register') ?>">发布房源</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/mypage') ?>">我的账号</a></div>
+          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/mypage?mylist') ?>">我的房源</a></div>
+          <div class="mobile-dropdown-item">登出</div>
         </div>
       </nav>
 

@@ -251,7 +251,7 @@
   .mb-mypage-card {
     display: flex;
     justify-content: space-between;
-    width: 66vw;
+    width: 100%;
     background-color: #fff;
     color: #000;
     padding: 6px;

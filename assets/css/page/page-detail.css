@@ -515,6 +515,11 @@
     margin-left: 0;
     letter-spacing: 0.8px;
   }
+
+  #mapDetailDiv {
+    height: 360px;
+    border-radius: 16px;
+  }
 }
 /* Tablets */
 @media (min-width: 768px) {
