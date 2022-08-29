@@ -11,6 +11,7 @@ if (window.location.pathname === '/mypage/') {
         const userRef = db.collection('userInfo');
 
         const myListingDiv = document.querySelector('#myListingDiv');
+        const mbMyListing = document.querySelector('#mbMyListing');
 
         listingRef
           .where('uid', '==', uid)
@@ -24,10 +25,10 @@ if (window.location.pathname === '/mypage/') {
 
               if (el.data().type == 'studio') {
                 var objPropBed = 'Studio';
-                var objPropBath = '1 Bathroom';
+                var objPropBath = '1 Bath';
               } else {
-                var objPropBed = el.data().type[0] + ' Bedroom';
-                var objPropBath = el.data().type[2] + ' Bathroom';
+                var objPropBed = el.data().type[0] + ' Bed';
+                var objPropBath = el.data().type[2] + ' Bath';
               }
 
               myListingDiv.innerHTML += `
@@ -73,6 +74,30 @@ if (window.location.pathname === '/mypage/') {
                     }${el.data().writetime}"><span>&nbsp;删除</span></i>
                   </div>
                 </div>
+              `;
+
+              mbMyListing.innerHTML += `
+              <div class="mb-mypage-card">
+                <a href="/detail/?li=${el.data().uid}${el.data().writetime}">
+                  <div class="mb-mypage-card-cont">
+                    <img class="mb-mypage-card-img" src="https://drive.google.com/uc?export=view&id=${
+                      el.data().pictures[0]
+                    }">
+                    <div class="mb-mypage-card-desc">
+                      <p class="mb-mypage-card-title">${el.data().title}</p>
+                      <div class="mb-mypage-card-info">
+                        <p>${objPropBed}</p>
+                        <p>${objPropBath}</p>
+                        <p>$ ${el.data().price}/月</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mb-mypage-card-editdelete">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </div>
+              </div>
               `;
             });
 
@@ -154,6 +179,37 @@ if (window.location.pathname === '/mypage/') {
       });
       mypageCateBtn[2].style.color = '#fff';
       mypageCateBtn[2].style.backgroundColor = 'rgb(0, 0, 0, 0.8)';
+    }
+
+    const mobMypageCateBtn = document.querySelectorAll('.mob-mpcat-item');
+
+    mobMypageCateBtn.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        let index = [...mobMypageCateBtn].indexOf(el);
+        mypageSection.forEach((ele) => {
+          ele.style.display = 'none';
+        });
+        mypageSection[index].style.display = 'flex';
+        mobMypageCateBtn.forEach((ele) => {
+          ele.style.backgroundColor = '#fff';
+          ele.style.color = '#000';
+        });
+        mobMypageCateBtn[index].style.color = '#fff';
+        mobMypageCateBtn[index].style.backgroundColor = 'rgb(0, 0, 0, 0.8)';
+      });
+    });
+
+    if (window.location.search === '?mylist') {
+      mypageSection.forEach((ele) => {
+        ele.style.display = 'none';
+      });
+      mypageSection[2].style.display = 'flex';
+      mobMypageCateBtn.forEach((ele) => {
+        ele.style.backgroundColor = '#fff';
+        ele.style.color = '#000';
+      });
+      mobMypageCateBtn[2].style.color = '#fff';
+      mobMypageCateBtn[2].style.backgroundColor = 'rgb(0, 0, 0, 0.8)';
     }
   });
 }

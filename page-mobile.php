@@ -94,17 +94,21 @@
     </div> -->
   </div>
   <div class="m-footer">
-    <div class="mf-menu-item">
-      <img class="mf-menu-home" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-home.png') ?>" alt="ChinaMovesUSA">
-      <p>首页</p>
-    </div>
+    <a href="<?php echo site_url('/mobile') ?>">
+      <div class="mf-menu-item">
+        <img class="mf-menu-home" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-home.png') ?>" alt="ChinaMovesUSA">
+        <p>首页</p>
+      </div>
+    </a>
     <div class="mf-menu-item ft-more">
       <img class="mf-menu-more" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-more.png') ?>" alt="ChinaMovesUSA">
     </div>
-    <div class="mf-menu-item">      
-      <img class="mf-menu-home" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-my.png') ?>" alt="ChinaMovesUSA">
-      <p>我的</p>
-    </div>
+    <a href="<?php echo site_url('/mypage') ?>">
+      <div class="mf-menu-item">      
+        <img class="mf-menu-home" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-my.png') ?>" alt="ChinaMovesUSA">
+        <p>我的</p>
+      </div>
+    </a>
   </div>
 
 </section>

@@ -6975,6 +6975,8 @@ iMac 27"           2560x1440 */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  margin: 16px 0;
 }
 
 .mf-menu-item > p {
@@ -6991,7 +6993,7 @@ iMac 27"           2560x1440 */
   width: 60px;
   height: 60px;
   background-color: #000;
-  transform: translateY(-24px);
+  transform: translateY(-40px);
   border-radius: 50%;
 }
 
@@ -7027,26 +7029,17 @@ iMac 27"           2560x1440 */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: calc(100vh - 100px);
 }
 
 .mypage-category {
-  width: 100px;
   position: absolute;
   z-index: 10;
-  top: 40%;
-  left: calc(50% - 612px);
   transform: translate(0, -50%);
   background-color: transparent;
-  font-size: 16px;
   text-align: center;
-  border-top-left-radius: 24px;
-  border-bottom-left-radius: 24px;
 }
 
 .mpcat-item {
-  padding: 24px 0;
   cursor: pointer;
 }
 
@@ -7055,34 +7048,26 @@ iMac 27"           2560x1440 */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1024px;
-  height: 680px;
   background-color: rgb(0, 0, 0, 0.8);
-  border-radius: 24px;
   color: #fff;
   overflow: auto;
 }
-
-.mypage-avatar {
-  width: 148px;
-  height: 148px;
-  margin-bottom: 32px;
+.laptop-listing-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  overflow: auto;
 }
 
 .mypage-input-cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 540px;
-  margin: 20px 0;
 }
 
 .mypage-input {
-  width: 440px;
-  height: 36px;
   border: none;
-  padding: 0 18px;
-  border-radius: 18px;
 }
 
 .mypage-input:focus {
@@ -7091,36 +7076,21 @@ iMac 27"           2560x1440 */
 }
 
 .mypage-submit-btn {
-  width: 64px;
-  height: 32px;
-  margin-top: 48px;
   background-color: #f78915;
   color: #fff;
-  font-size: 16px;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
 }
-
-/* .myListingAnchor {
-  color: #000;
-} */
 
 .listing-section {
   justify-content: start;
-  padding: 32px;
 }
 
 .myp-lising-card {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 960px;
-  height: 160px;
-  border-radius: 8px;
-  margin-bottom: 16px;
 }
-/* > .myp-card-desc */
 
 .myp-lising-card:hover .myp-card-desc {
   background-color: rgb(0, 0, 0, 0.3);
@@ -7136,78 +7106,44 @@ iMac 27"           2560x1440 */
 }
 
 .myp-card-img {
-  width: 280px;
-  height: 160px;
-  border-radius: 8px;
-  object-fit: cover;
   background-image: url(images/CM_loadingspinner.24b933aa.gif);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 64px;
 }
 
 .myp-card-img-desc {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  bottom: 5px;
-  width: 100%;
-  font-size: 12px;
   color: #fff;
   background-color: rgb(0, 0, 0, 0.6);
-  padding: 6px 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.myp-card-type > p {
-  margin: 2px 0;
 }
 
 .myp-card-desc {
   display: flex;
-  /* flex-direction: column; */
   align-items: flex-end;
   justify-content: space-between;
-  width: 664px;
-  /* width: 580px; */
-  height: 160px;
-  border-radius: 8px;
-  padding: 24px;
   background-color: #fff;
   color: #000;
-}
-
-.myp-card-detail > p {
-  margin-top: 6px;
 }
 
 .myp-card-editdelete {
   display: flex;
   position: absolute;
-  width: 200px;
-  bottom: 0;
-  right: 0;
-  padding: 24px;
   color: #000;
 }
 
 .myp-edit-div {
-  width: 28px;
-  height: 28px;
-  margin: 0 4px;
   background-image: url(images/edit_b.d1bd1690.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
 }
 
 .myp-lising-card:hover .myp-edit-div {
   background-image: url(images/edit_o.c9e8188b.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
 }
 
 .myp-lising-card:hover .myp-card-editdelete {
@@ -7216,17 +7152,10 @@ iMac 27"           2560x1440 */
 
 .editdelete {
   display: flex;
-  width: 54px;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
-  margin-left: 16px;
   z-index: 15;
   cursor: pointer;
-}
-
-.editdelete > span {
-  font-size: 14px;
 }
 
 .editdelete:hover {
@@ -7234,20 +7163,15 @@ iMac 27"           2560x1440 */
 }
 
 .myp-delete-div {
-  width: 28px;
-  height: 28px;
-  margin: 0 4px;
   background-image: url(images/delete_b.31f66095.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
 }
 
 .myp-lising-card:hover .myp-delete-div {
   background-image: url(images/delete_w.0687f573.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
 }
 
 .myp-delete-div:hover {
@@ -7255,89 +7179,421 @@ iMac 27"           2560x1440 */
   background-image: url(images/delete_o.b1324d64.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 28px;
 }
 
 .mp-wallpaper {
   position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
   object-fit: cover;
   z-index: -5;
 }
 
-/* .deleteDiv {
-  height: 74px;
-  width: 74px;
-  background-color: #c0c0c0;
-  color: #000;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.deleteDiv:hover {
-  color: #fff;
-  background-color: darkred;
-}
-
-.deleteIcon {
-  width: 40px;
-  height: 40px;
-  background-image: url('/assets/img/icon/delete.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 36px;
-}
-
-.deleteDiv:hover > .deleteIcon {
-  background-image: url('/assets/img/icon/delete_w.png');
-}
-
-.editDiv {
-  height: 74px;
-  width: 74px;
-  cursor: pointer;
-  background-color: #c0c0c0;
-  border-radius: 8px;
-  color: #000;
-}
-
-.editDiv:hover {
-  color: #fff;
-  background-color: darkblue;
-}
-
-.editIcon {
-  width: 40px;
-  height: 40px;
-  background-image: url('/assets/img/icon/edit.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 36px;
-}
-
-.editDiv:hover > .editIcon {
-  background-image: url('/assets/img/icon/edit_w.png');
-} */
-
 .editdeleteLoadingSpinner {
-  height: 74px;
-  width: 74px;
-  border-radius: 8px;
   background-image: url(images/CM_loadingspinner.24b933aa.gif);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100px;
   cursor: wait;
 }
 
 /* Cell phone */
 @media (min-width: 200px) {
+  .mypage-body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 100px);
+  }
+
+  .mobile-mypage-category {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 64vw;
+    height: 32px;
+    font-size: 12px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    z-index: 20;
+  }
+
+  .mypage-category {
+    display: none;
+  }
+
+  .mob-mpcat-item {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mpcat-item {
+    padding: 24px 0;
+  }
+
+  .mypage-section {
+    width: 75vw;
+    height: 540px;
+    border-radius: 16px;
+  }
+
+  .mypage-avatar {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+  }
+
+  .mypage-input-cont {
+    width: 60vw;
+    margin: 12px 0;
+    font-size: 12px;
+  }
+
+  .mypage-input {
+    width: 180px;
+    height: 32px;
+    padding: 0 18px;
+    border-radius: 16px;
+  }
+
+  .mypage-submit-btn {
+    width: 64px;
+    height: 32px;
+    margin-top: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .listing-section {
+    padding: 20px;
+  }
+
+  /* TOP LINE MOBILE LISTING */
+
+  .laptop-listing-div {
+    display: none;
+  }
+
+  .mb-mypage-card {
+    display: flex;
+    justify-content: space-between;
+    width: 66vw;
+    background-color: #fff;
+    color: #000;
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .mb-mypage-card > a {
+    color: #000;
+  }
+
+  .mb-mypage-card-cont {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mb-mypage-card-img {
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+
+  .mb-mypage-card-desc {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    font-size: 12px;
+    justify-content: space-evenly;
+  }
+
+  .mb-mypage-card-info {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mb-mypage-card-editdelete {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .mb-mypage-card-editdelete > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    /* padding-left: 8px; */
+  }
+
+  /* BOTTOM LINE MOBILE LISTING */
+
+  .myp-lising-card {
+    width: 50vw;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .myp-card-img {
+    width: 280px;
+    height: 160px;
+    border-radius: 8px;
+    background-size: 64px;
+  }
+
+  .myp-card-img-desc {
+    bottom: 5px;
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .myp-card-type > p {
+    margin: 2px 0;
+  }
+
+  .myp-card-desc {
+    width: 664px;
+    height: 160px;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .myp-card-detail > p {
+    margin-top: 6px;
+  }
+
+  .myp-card-editdelete {
+    width: 200px;
+    bottom: 0;
+    right: 0;
+    padding: 24px;
+  }
+
+  .myp-edit-div {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+    background-size: 28px;
+  }
+
+  .myp-lising-card:hover .myp-edit-div {
+    background-size: 28px;
+  }
+
+  .editdelete {
+    width: 54px;
+    font-size: 20px;
+    margin-left: 16px;
+  }
+
+  .editdelete > span {
+    font-size: 14px;
+  }
+
+  .myp-delete-div {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+    background-size: 28px;
+  }
+
+  .myp-lising-card:hover .myp-delete-div {
+    background-size: 28px;
+  }
+
+  .myp-delete-div:hover {
+    background-size: 28px;
+  }
+
+  .mp-wallpaper {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .editdeleteLoadingSpinner {
+    height: 74px;
+    width: 74px;
+    border-radius: 8px;
+    background-size: 100px;
+  }
 }
 /* Tablets */
 @media (min-width: 768px) {
+  .mypage-body {
+    flex-direction: row;
+    width: 100vw;
+    height: calc(100vh - 100px);
+  }
+
+  .mobile-mypage-category {
+    display: none;
+  }
+
+  .mypage-category {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100px;
+    top: 40%;
+    left: calc(50% - 612px);
+    font-size: 16px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+
+  .mpcat-item {
+    padding: 24px 0;
+  }
+
+  .mypage-section {
+    width: 1024px;
+    height: 680px;
+    border-radius: 24px;
+  }
+
+  .mypage-avatar {
+    width: 148px;
+    height: 148px;
+    margin-bottom: 32px;
+  }
+
+  .mypage-input-cont {
+    width: 540px;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+
+  .mypage-input {
+    width: 440px;
+    height: 36px;
+    padding: 0 18px;
+    border-radius: 18px;
+  }
+
+  .mypage-submit-btn {
+    width: 64px;
+    height: 32px;
+    margin-top: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .laptop-listing-div {
+    display: flex;
+  }
+
+  .mob-listing-div {
+    display: none;
+  }
+
+  .listing-section {
+    padding: 32px;
+  }
+
+  .myp-lising-card {
+    width: 960px;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .myp-card-img {
+    width: 280px;
+    height: 160px;
+    border-radius: 8px;
+    background-size: 64px;
+  }
+
+  .myp-card-img-desc {
+    bottom: 5px;
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .myp-card-type > p {
+    margin: 2px 0;
+  }
+
+  .myp-card-desc {
+    width: 664px;
+    height: 160px;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .myp-card-detail > p {
+    margin-top: 6px;
+  }
+
+  .myp-card-editdelete {
+    width: 200px;
+    bottom: 0;
+    right: 0;
+    padding: 24px;
+  }
+
+  .myp-edit-div {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+    background-size: 28px;
+  }
+
+  .myp-lising-card:hover .myp-edit-div {
+    background-size: 28px;
+  }
+
+  .editdelete {
+    width: 54px;
+    font-size: 20px;
+    margin-left: 16px;
+  }
+
+  .editdelete > span {
+    font-size: 14px;
+  }
+
+  .myp-delete-div {
+    width: 28px;
+    height: 28px;
+    margin: 0 4px;
+    background-size: 28px;
+  }
+
+  .myp-lising-card:hover .myp-delete-div {
+    background-size: 28px;
+  }
+
+  .myp-delete-div:hover {
+    background-size: 28px;
+  }
+
+  .mp-wallpaper {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .editdeleteLoadingSpinner {
+    height: 74px;
+    width: 74px;
+    border-radius: 8px;
+    background-size: 100px;
+  }
 }
 /* MacBook Pro */
 @media (min-width: 1024px) {
