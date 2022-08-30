@@ -6971,6 +6971,7 @@ iMac 27"           2560x1440 */
 
 /* MOBILE FRONT ROOMMATE */
 .mbrm-input {
+  width: 140px;
   padding: 2px 4px;
   margin: 0 4px;
   border: #c9c9c9 1px solid;

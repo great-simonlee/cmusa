@@ -162,7 +162,7 @@
     </div>
     <div class="mbrm-select-div">
       <label for="mb-rm-area"><h4>区域</h4></label>
-      <input class="mbrm-input" type="text" id="mb-rm-area">
+      <input class="mbrm-input" type="text" id="mb-rm-area" placeholder="ex) 曼哈顿-中城">
     </div>
     <div class="mbrm-select-div">
       <h4>职业</h4>
