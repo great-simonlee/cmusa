@@ -7,7 +7,7 @@
   <div class="dt-cont" id="detailContDiv" style="display: none;">
     <div class="dt-desc-cont" id="descContainer">
       <div>
-        <h1 id="detailTitle">THIS IS TITLE</h1>
+        <p class="dt-listing-cat-title" id="detailTitle">THIS IS TITLE</p>
         <!-- <p><img class="dtd-bm-icon" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-bm-blank.png') ?>" alt="bookmark">收藏（0）｜<img class="dtd-bm-icon" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-view.png') ?>" alt="bookmark">浏览（0）</p> -->
       </div>
       <div class="dtd-ml-display">
@@ -50,17 +50,17 @@
               <p>中介费：<br><span class="detailBroker"></span></p>
             </div>
           </div>
-          <button class="dt-info-btn">现在联系</button>
+          <!-- <button class="dt-info-btn">现在联系</button> -->
         </div>
       </div>
       <div class="dtd-content-cont">
-        <p class="dtdc-title">房源简介</p>
+        <p class="dtd-title">房源简介</p>
         <div class="dtdc-desc">
           <p id="detailDescription">THIS IS DESCRIPTION</p>
         </div>
       </div>
       <div class="dtd-content-cont">
-        <p class="dtdc-title">房屋配置</p>
+        <p class="dtd-title">房屋配置</p>
         <div class="dtdc-fea-cont">
           <div class="dtdc-fea-card">
             <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Washer.png') ?>" alt="">
@@ -89,7 +89,7 @@
         </div>
       </div>
       <div class="dtd-content-cont">
-        <p class="dtdc-title">大楼设施</p>
+        <p class="dtd-title">大楼设施</p>
         <div class="dtdc-fea-cont">
           <div class="dtdc-fea-card">
             <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Concierge.png') ?>" alt="">
@@ -162,14 +162,14 @@
         </div>
       </div>
       <div class="dtd-content-cont" id="locContainer">
-        <p class="dtdc-title">房源位置</p>
+        <p class="dtd-title">房源位置</p>
         <div class="dtdc-desc">
           <div id="mapDetailDiv"></div>
           <img style="display: none;" class="dtdc-loc" src="<?php echo get_theme_file_uri('/assets/img/example/detailLoc.png') ?>" alt="example">
         </div>
       </div>
       <div class="dtd-content-cont" style="display: none;">
-        <p class="dtdc-title">类似房源</p>
+        <p class="dtd-title">类似房源</p>
         <ul class="dtdc-desc">
           <li class="dtdc-rec-listing">
             <img src="<?php echo get_theme_file_uri('/assets/img/example/listing1.png') ?>" alt="">

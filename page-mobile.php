@@ -145,27 +145,27 @@
     <p class="mb-rm-subtitle">* China Moves地产团队绝对不会和任何人分享有关您的信息。</p>
     <p class="mb-rm-cat-title" style="margin-top: 16px;">介绍你自己</p>
     <div class="mbrm-select-div">
-      <label for="mb-rm-name"><p>名字</p></label>
+      <label for="mb-rm-name"><p>名字:</p></label>
       <input class="mbrm-input" type="text" id="mb-rm-name">
     </div>
     <div class="mbrm-select-div">
-      <label for="mb-rm-contact"><p>联系方式</p></label>
+      <label for="mb-rm-contact"><p>联系方式:</p></label>
       <input class="mbrm-input" type="text" id="mb-rm-contact">
     </div>
     <div class="mbrm-select-div">
-      <label for="mb-rm-budget"><p>预算</p></label>
+      <label for="mb-rm-budget"><p>预算:</p></label>
       <input class="mbrm-input" type="number" id="mb-rm-budget" min="500" max="10000">
     </div>
     <div class="mbrm-select-div">
-      <label for="mb-rm-date"><p>入住时间</p></label>
+      <label for="mb-rm-date"><p>入住时间:</p></label>
       <input class="mbrm-input" type="date" id="mb-rm-date">
     </div>
     <div class="mbrm-select-div">
-      <label for="mb-rm-area"><p>区域</p></label>
+      <label for="mb-rm-area"><p>区域:</p></label>
       <input class="mbrm-input" type="text" id="mb-rm-area" placeholder="ex) 曼哈顿-中城">
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>职业</p>
+      <p>职业:</p>
       <div>
         <input type="radio" name="mb-rm-job" class="mbrm-radio-btn" id="mbrm-job-student" data-input="Student">
         <label class="mb-rm-label" for="mbrm-job-student">学生</label>
@@ -184,7 +184,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>性别</p>
+      <p>性别:</p>
       <div>
         <input type="radio" name="mb-rm-gender" class="mbrm-radio-btn" id="mbrm-gender-male" data-input="Male">
         <label class="mb-rm-label" for="mbrm-gender-male">男</label>
@@ -203,7 +203,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>年龄</p>
+      <p>年龄:</p>
       <div>
         <input type="radio" name="mb-rm-age" class="mbrm-radio-btn" id="mbrm-age-19" data-input="Under 19">
         <label class="mb-rm-label" for="mbrm-age-19">19岁以下</label>
@@ -230,7 +230,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>宠物</p>
+      <p>宠物:</p>
       <div>
         <input type="radio" name="mb-rm-pet" class="mbrm-radio-btn" id="mbrm-pet-dog" data-input="Dog">
         <label class="mb-rm-label" for="mbrm-pet-dog">狗</label>
@@ -249,7 +249,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>抽烟</p>
+      <p>抽烟:</p>
       <div>
         <input type="radio" name="mb-rm-ciga" class="mbrm-radio-btn" id="mbrm-ciga-yes" data-input="Smoke">
         <label class="mb-rm-label" for="mbrm-ciga-yes">吸烟</label>
@@ -269,7 +269,7 @@
     </div>
     <p class="mb-rm-cat-title mb-rm-cat-sec-title">预期室友</p>
     <div class="mbrm-select-div add-margin-div">
-      <p>性别</p>
+      <p>性别:</p>
       <div>
         <input type="radio" name="mb-rme-gender" class="mbrm-radio-btn" id="mbrme-gender-male" data-input="Male">
         <label class="mb-rm-label" for="mbrme-gender-male">男</label>
@@ -288,7 +288,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>年龄</p>
+      <p>年龄:</p>
       <div>
         <input type="radio" name="mb-rme-age" class="mbrm-radio-btn" id="mbrme-age-19" data-input="Under 19">
         <label class="mb-rm-label" for="mbrme-age-19">19岁以下</label>
@@ -315,7 +315,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>职业</p>
+      <p>职业:</p>
       <div>
         <input type="radio" name="mb-rme-job" class="mbrm-radio-btn" id="mbrme-job-student" data-input="Student">
         <label class="mb-rm-label" for="mbrme-job-student">学生</label>
@@ -334,7 +334,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>宠物</p>
+      <p>宠物:</p>
       <div>
         <input type="radio" name="mb-rme-pet" class="mbrm-radio-btn" id="mbrme-pet-dog" data-input="Dog">
         <label class="mb-rm-label" for="mbrme-pet-dog">狗</label>
@@ -357,7 +357,7 @@
       </div>
     </div>
     <div class="mbrm-select-div add-margin-div">
-      <p>抽烟</p>
+      <p>抽烟:</p>
       <div>
         <input type="radio" name="mb-rme-ciga" class="mbrm-radio-btn" id="mbrme-ciga-yes" data-input="Smoke">
         <label class="mb-rm-label" for="mbrme-ciga-yes">是</label>
