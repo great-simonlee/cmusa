@@ -121,7 +121,7 @@
   margin: 5vw 0 1vw 0;
 }
 
-.mb-menu-item {
+.mb-menu-category-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +140,7 @@
   background-color: #f9f9f9;
 }
 
-.mb-menu-selected {
+.mb-menu-category-selected {
   width: 25vw;
   height: 4px;
   border-radius: 2px;
@@ -187,7 +187,7 @@
 
 .mb-filter-item-detail {
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   padding-bottom: 4px;
 }
@@ -257,6 +257,75 @@
   font-size: 2.5vw;
   color: #f78915;
 }
+
+.mb-front-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.mb-rm-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mb-rm-subtitle {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 4px 0;
+}
+
+/* MOBILE FRONT ROOMMATE */
+.mbrm-input {
+  padding: 2px 4px;
+  margin: 0 4px;
+  border: #c9c9c9 1px solid;
+  border-radius: 4px;
+}
+
+.mbrm-input:focus {
+  border: #f78915 1px solid;
+}
+
+.mbrm-select-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+  font-size: 12px;
+}
+
+.mbrm-radio-btn {
+  display: none;
+}
+
+.mb-rm-label {
+  padding: 2px 4px;
+  margin: 0 4px;
+  border: #f78915 1px solid;
+  border-radius: 4px;
+}
+
+.mbrm-radio-btn:checked ~ .mb-rm-label {
+  background-color: #f78915;
+  color: #fff;
+}
+
+.mb-rm-submit {
+  width: 160px;
+  height: 36px;
+  font-size: 16px;
+  background-color: #f78915;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 8px;
+  outline: none;
+  border: none;
+}
+/* MOBILE FRONT ROOMMATE */
 
 .m-footer {
   display: flex;

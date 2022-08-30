@@ -116,7 +116,6 @@ if (window.location.pathname === '/mobile/') {
     const filterDivDetail = document.querySelectorAll('.mb-filter-item-detail');
     const mobileTimeFilter = document.querySelector('#mobile-filter-time');
     mobileTimeFilter.addEventListener('click', () => {
-      // mobileListingCont.innerHTML = '';
       fileterDiv.style.display = 'flex';
       filterDivDetail.forEach((el) => {
         el.style.visibility = 'hidden';
@@ -125,7 +124,6 @@ if (window.location.pathname === '/mobile/') {
     });
     const mobileAreaFilter = document.querySelector('#mobile-filter-area');
     mobileAreaFilter.addEventListener('click', () => {
-      // mobileListingCont.innerHTML = '';
       fileterDiv.style.display = 'flex';
       filterDivDetail.forEach((el) => {
         el.style.visibility = 'hidden';
@@ -139,7 +137,6 @@ if (window.location.pathname === '/mobile/') {
         el.style.visibility = 'hidden';
       });
       filterDivDetail[2].style.visibility = 'visible';
-      console.log('price');
     });
 
     // Actual Listing Showing
@@ -151,7 +148,6 @@ if (window.location.pathname === '/mobile/') {
         document.querySelector('#mobileFrontLoadingSpinnerDiv').style.display =
           'none';
         res.docs.map((doc) => {
-          console.log(doc.data());
           mobileListingCont.innerHTML += `
           <a class="mobileListingAnchor" href="/detail/?li=${doc.data().uid}${
             doc.data().writetime
@@ -173,5 +169,52 @@ if (window.location.pathname === '/mobile/') {
           </a>`;
         });
       });
+
+    //
+    var selectedCategory;
+    const mobileFrontCategory = document.querySelectorAll(
+      '.mb-menu-category-item'
+    );
+    const underlineCategory = document.querySelectorAll(
+      '.mb-menu-category-selected'
+    );
+    const mobileFrontRentListingDiv = document.querySelector(
+      '#mb-front-rentListing'
+    );
+    const mobileFrontShorterm = document.querySelector('#mb-front-shortterm');
+    const mobileFrontRoommate = document.querySelector('#mb-front-roommate');
+
+    mobileFrontCategory.forEach((el) => {
+      // el.style.color = '#c9c9c9';
+      el.addEventListener('click', (e) => {
+        e.target.style.color = '#000';
+        selectedCategory = e.target.getAttribute('cate-index');
+
+        for (i = 0; i < e.target.parentNode.children.length; i++) {
+          e.target.parentNode.children[i].style.color = '#c9c9c9';
+        }
+        for (i = 0; i < e.target.parentNode.children.length; i++) {
+          underlineCategory[i].style.visibility = 'hidden';
+        }
+        underlineCategory[selectedCategory].style.visibility = 'visible';
+        e.target.parentNode.children[selectedCategory].style.color = '#000';
+
+        if (selectedCategory == 0) {
+          mobileFrontRentListingDiv.style.display = 'block';
+          mobileFrontShorterm.style.display = 'none';
+          mobileFrontRoommate.style.display = 'none';
+        } else if (selectedCategory == 1) {
+          mobileFrontRentListingDiv.style.display = 'none';
+          mobileFrontShorterm.style.display = 'block';
+          mobileFrontRoommate.style.display = 'none';
+        } else if (selectedCategory == 2) {
+          mobileFrontRentListingDiv.style.display = 'none';
+          mobileFrontShorterm.style.display = 'none';
+          mobileFrontRoommate.style.display = 'block';
+        }
+      });
+    });
+
+    //
   });
 }
