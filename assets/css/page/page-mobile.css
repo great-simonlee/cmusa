@@ -268,14 +268,23 @@
 }
 
 .mb-rm-title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
 }
 
 .mb-rm-subtitle {
   font-size: 12px;
   font-weight: 300;
-  margin: 4px 0;
+  margin: 8px 0;
+}
+
+.mb-rm-cat-title {
+  font-size: 14px;
+}
+
+.mb-rm-cat-sec-title {
+  padding: 8px 0;
 }
 
 /* MOBILE FRONT ROOMMATE */
@@ -299,6 +308,10 @@
   font-size: 12px;
 }
 
+.add-margin-div {
+  padding: 2px 0;
+}
+
 .mbrm-radio-btn {
   display: none;
 }
@@ -306,12 +319,13 @@
 .mb-rm-label {
   padding: 2px 4px;
   margin: 0 4px;
-  border: #f78915 1px solid;
+  border: #c9c9c9 1px solid;
   border-radius: 4px;
 }
 
 .mbrm-radio-btn:checked ~ .mb-rm-label {
   background-color: #f78915;
+  border: #f78915 1px solid;
   color: #fff;
 }
 
