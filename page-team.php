@@ -66,19 +66,6 @@
       </div>
     </div>
     <div class="tm-agent-cont">
-      <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/simon.png') ?>" alt="">
-      <div class="tm-agent-info">
-        <div class="tm-agent-infoOne">
-          <p class="tm-agent-maininfo">Simon Lee</p>
-          <p class="tm-agent-subinfo">Licensed Salesperson</p>
-        </div>
-        <div class="tm-agent-infoTwo">
-          <p class="tm-agent-subinfo">(3o5) 458-8o75</p>
-          <p class="tm-agent-subinfo">simon@newyorkmovesre.com</p>
-        </div>
-      </div>
-    </div>
-    <div class="tm-agent-cont">
       <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/yiting.png') ?>" alt="">
       <div class="tm-agent-info">
         <div class="tm-agent-infoOne">
