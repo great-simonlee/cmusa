@@ -646,11 +646,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const mobileDDList = document.querySelector('#mobile-dd-detail');
   mobileMenu.addEventListener('click', () => {
     if (mobileMenu.getAttribute('menu-active') == 0) {
-      console.log('closed');
       mobileMenu.setAttribute('menu-active', 1);
       mobileDDList.style.display = 'flex';
     } else {
-      console.log('open');
       mobileMenu.setAttribute('menu-active', 0);
       mobileDDList.style.display = 'none';
     }
@@ -716,9 +714,126 @@ if (window.location.pathname === '/mobile/') {
       }
 
       return numed;
+    }; // URL Param variables
+
+
+    const currentURL = window.location.search;
+    const currentParamsURL = new URLSearchParams(currentURL);
+    var NYRef = db.collection('rentListing'); // Mobile Filter Section
+
+    const findParamKeyValue = str => {
+      if (currentParamsURL.get(str) == null) {
+        document.querySelector(`#mob${str}all`).style.color = '#f78915';
+      } else {
+        document.querySelector(`#mob${str}${currentParamsURL.get(str)}`).style.color = '#f78915';
+      }
     };
 
-    const NYRef = db.collection('rentListing');
+    const getParamKey = () => {
+      findParamKeyValue('type');
+      findParamKeyValue('price');
+      findParamKeyValue('area');
+    };
+
+    getParamKey();
+
+    if (currentParamsURL.get('area')) {
+      NYRef = NYRef.where('area', '==', currentParamsURL.get('area'));
+    }
+
+    if (currentParamsURL.get('type')) {
+      NYRef = NYRef.where('type', '==', currentParamsURL.get('type'));
+    }
+
+    if (currentParamsURL.get('price')) {
+      switch (currentParamsURL.get('price')) {
+        case 'l1':
+          NYRef = NYRef.where('price', '<', '1000');
+          break;
+
+        case 'g1l2':
+          NYRef = NYRef.where('price', '>=', '1000');
+          NYRef = NYRef.where('price', '<', '2000');
+          break;
+
+        case 'g2l3':
+          NYRef = NYRef.where('price', '>=', '2000');
+          NYRef = NYRef.where('price', '<', '3000');
+          break;
+
+        case 'g3l4':
+          NYRef = NYRef.where('price', '>=', '3000');
+          NYRef = NYRef.where('price', '<', '4000');
+          break;
+
+        case 'g4l5':
+          NYRef = NYRef.where('price', '>=', '4000');
+          NYRef = NYRef.where('price', '<', '5000');
+          break;
+
+        case 'g5l6':
+          NYRef = NYRef.where('price', '>=', '5000');
+          NYRef = NYRef.where('price', '<', '6000');
+          break;
+
+        case 'g6':
+          NYRef = NYRef.where('price', '>=', '6000');
+          break;
+      }
+    }
+
+    const searchElSelector = elGroup => {
+      elGroup.forEach(el => {
+        el.addEventListener('click', e => {
+          var params = new URLSearchParams(window.location.search);
+
+          if (e.target.getAttribute('data-search') == 'all') {
+            params.delete(String(e.target.getAttribute('search-type')));
+            window.location.search = params;
+          } else {
+            params.set(String(e.target.getAttribute('search-type')), String(e.target.getAttribute('data-search')));
+            window.location.search = params;
+          }
+        });
+      });
+    };
+
+    const searchType = document.querySelectorAll('.mobSearchType');
+    const searchArea = document.querySelectorAll('.mobSearchArea');
+    const searchPrice = document.querySelectorAll('.mobSearchPrice');
+    searchElSelector(searchType);
+    searchElSelector(searchArea);
+    searchElSelector(searchPrice);
+    const fileterDiv = document.querySelector('#mobileFilterDiv');
+    const filterDivDetail = document.querySelectorAll('.mb-filter-item-detail');
+    const mobileTimeFilter = document.querySelector('#mobile-filter-time');
+    mobileTimeFilter.addEventListener('click', () => {
+      // mobileListingCont.innerHTML = '';
+      fileterDiv.style.display = 'flex';
+      filterDivDetail.forEach(el => {
+        el.style.visibility = 'hidden';
+      });
+      filterDivDetail[0].style.visibility = 'visible';
+    });
+    const mobileAreaFilter = document.querySelector('#mobile-filter-area');
+    mobileAreaFilter.addEventListener('click', () => {
+      // mobileListingCont.innerHTML = '';
+      fileterDiv.style.display = 'flex';
+      filterDivDetail.forEach(el => {
+        el.style.visibility = 'hidden';
+      });
+      filterDivDetail[1].style.visibility = 'visible';
+    });
+    const mobilePriceFilter = document.querySelector('#mobile-filter-price');
+    mobilePriceFilter.addEventListener('click', () => {
+      fileterDiv.style.display = 'flex';
+      filterDivDetail.forEach(el => {
+        el.style.visibility = 'hidden';
+      });
+      filterDivDetail[2].style.visibility = 'visible';
+      console.log('price');
+    }); // Actual Listing Showing
+
     const mobileListingCont = document.querySelector('#mobileListingCont');
     NYRef.limit(10).get().then(res => {
       // Mobile LS Disappear
@@ -1226,6 +1341,11 @@ if (window.location.pathname === '/register/') {
 /***/ (() => {
 
 if (window.location.pathname === '/rent/') {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    // Take the user to a different screen here.
+    window.location = '/mobile';
+  }
+
   window.addEventListener('DOMContentLoaded', () => {
     // Initialize map
     var maplisting = new mapboxgl.Map({
@@ -1571,6 +1691,11 @@ if (window.location.pathname === '/rent/') {
 /***/ (() => {
 
 if (window.location.pathname === '/roommate/') {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    // Take the user to a different screen here.
+    window.location = '/mobile';
+  }
+
   window.addEventListener('DOMContentLoaded', () => {
     let currentStep = 0;
     const rmQStep = document.querySelectorAll('.rm-question-step');

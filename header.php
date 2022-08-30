@@ -50,8 +50,6 @@
         </div>
         <div class="mobile-dropdown-detail" id="mobile-dd-detail" style="display: none;">
           <div class="mobile-dropdown-item non-member-menu"><a href="<?php echo site_url('/member-login') ?>">登陆</a> / <a href="<?php echo site_url('/member-signup') ?>">注册</a></div>
-          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/rent') ?>">租房</a></div>
-          <div class="mobile-dropdown-item"><a href="<?php echo site_url('/roommate') ?>">找室友</a></div>
           <div class="mobile-dropdown-item"><a href="<?php echo site_url('/team') ?>">团队</a></div>
           <div class="mobile-dropdown-item"><a href="<?php echo site_url('/aboutus') ?>">关于我们</a></div>
           <div class="mobile-dropdown-item"><a href="<?php echo site_url('/register') ?>">发布房源</a></div>

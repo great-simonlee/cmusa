@@ -35,10 +35,50 @@
     <div class="mb-menu-selected" style="visibility: hidden;"></div>
     <div class="mb-menu-selected" style="visibility: hidden;"></div>
   </div>
-  <div class="mb-filter">
-    <div class="mb-filter-item"><span>综合顺序</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
-    <div class="mb-filter-item"><span>选择区域</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
-    <div class="mb-filter-item"><span>选择价位</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
+  <div class="mb-filter-cont">
+    <div class="mb-filter">
+      <div class="mb-filter-item" id="mobile-filter-time"><span>房型</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
+      <div class="mb-filter-item" id="mobile-filter-area"><span>选择区域</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
+      <div class="mb-filter-item" id="mobile-filter-price"><span>选择价位</span><img class="mb-filter-img" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-downtri-bl2.png') ?>" alt="ChinaMovesUSA"></div>
+    </div>
+    <div class="mb-filter-item-detail-div" id="mobileFilterDiv" style="display: none;">
+      <div class="mb-filter-item-detail" style="visibility: hidden;">
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtypeall" search-type="type" data-search="all" >全部</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtypestudio" search-type="type" data-search="studio">Studio</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype1b1b" search-type="type" data-search="1b1b">一室一卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype1b2b" search-type="type" data-search="1b2b">一室两卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype2b1b" search-type="type" data-search="2b1b">两室一卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype2b2b" search-type="type" data-search="2b2b">两室两卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype3b1b" search-type="type" data-search="3b1b">三室一卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype3b2b" search-type="type" data-search="3b2b">三室两卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtype4b2b" search-type="type" data-search="4b2b">四室两卫</p>
+          <p class="mb-filter-item-detail-list mobSearchType" id="mobtypeetc" search-type="type" data-search="etc">其他</p>
+      </div>
+      <div class="mb-filter-item-detail" style="visibility: hidden;">
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareaall" search-type="area" data-search="all" >全部</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareadowntown" search-type="area" data-search="downtown" >曼哈顿-下城</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareamidtown" search-type="area" data-search="midtown" >曼哈顿-中城</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareauptown" search-type="area" data-search="uptown" >曼哈顿-上城</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobarealic" search-type="area" data-search="lic" >长岛市</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareanjcity" search-type="area" data-search="njcity" >新泽西</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareaqueens" search-type="area" data-search="queens" >皇后区</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareaflushing" search-type="area" data-search="flushing" >法拉盛</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareabrooklyn" search-type="area" data-search="brooklyn" >布鲁克林</p>
+          <!-- <p class="mb-filter-item-detail-list mobSearchArea" id="mobareastatenisland" search-type="area" data-search="statenisland" >斯塔滕岛</p>
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareabronx" search-type="area" data-search="bronx" >布朗克斯</p> -->
+          <p class="mb-filter-item-detail-list mobSearchArea" id="mobareaetc" search-type="area" data-search="etc" >其他</p>
+      </div>
+      <div class="mb-filter-item-detail" style="visibility: hidden;">
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceall" search-type="price" data-search="all" >全部</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpricel1" search-type="price" data-search="l1">$1k 以下</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg1l2" search-type="price" data-search="g1l2">$1k ~ $2k</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg2l3" search-type="price" data-search="g2l3">$2k ~ $3k</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg3l4" search-type="price" data-search="g3l4">$3k ~ $4k</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg4l5" search-type="price" data-search="g4l5">$4k ~ $5k</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg5l6" search-type="price" data-search="g5l6">$5k ~ $6k</p>
+          <p class="mb-filter-item-detail-list mobSearchPrice" id="mobpriceg6" search-type="price" data-search="g6">$6k 以上</p>
+      </div>
+    </div>
   </div>
   <div class="mb-card-cont" id="mobileListingCont">
     <div class="mb-front-ls-div" id="mobileFrontLoadingSpinnerDiv">

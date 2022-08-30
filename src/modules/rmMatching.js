@@ -1,4 +1,12 @@
 if (window.location.pathname === '/roommate/') {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    // Take the user to a different screen here.
+    window.location = '/mobile';
+  }
   window.addEventListener('DOMContentLoaded', () => {
     let currentStep = 0;
     const rmQStep = document.querySelectorAll('.rm-question-step');

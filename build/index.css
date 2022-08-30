@@ -6883,6 +6883,11 @@ iMac 27"           2560x1440 */
   background-color: #000;
 }
 
+.mb-filter-cont {
+  display: flex;
+  flex-direction: column;
+}
+
 .mb-filter {
   display: flex;
   align-items: center;
@@ -6907,6 +6912,24 @@ iMac 27"           2560x1440 */
   width: 3.5vw;
   height: 3.5vw;
   margin-left: 4px;
+}
+
+.mb-filter-item-detail-div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.mb-filter-item-detail {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.mb-filter-item-detail-list {
+  padding: 8px 0;
 }
 
 .mb-front-ls-div {
@@ -6978,6 +7001,7 @@ iMac 27"           2560x1440 */
   color: #fff;
   padding-bottom: 36px;
   background-color: #000;
+  margin-top: 24px;
 }
 
 .mf-menu-item {
