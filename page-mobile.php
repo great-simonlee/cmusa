@@ -136,8 +136,8 @@
     </div>
   </div>
   <div class="mb-front-category" id="mb-front-shortterm" style="display: none;">
-    <h1>THIS IS SHORTTERM</h1>
-    <h2>THIS WILL BE AVAILABLE SOON</h2>
+    <h3>This is Short-term</h3>
+    <h4>Short-term will be available soon</h4>
   </div>
   <div class="mb-front-category" id="mb-front-roommate" style="display: none;">
     <p class="mb-rm-title">你是否正在寻找可以一起申请公寓的室友?<br>China Moves地产团队可以帮忙!</p>
