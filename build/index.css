@@ -6466,7 +6466,7 @@ iMac 27"           2560x1440 */
     display: flex;
     align-items: center;
     width: 23vw;
-    font-size: 10.5px;
+    font-size: 2.4vw;
     font-weight: 300;
     margin-top: 6px;
   }
@@ -6535,7 +6535,7 @@ iMac 27"           2560x1440 */
 
   .dtdc-fea-cont {
     display: grid;
-    grid-template-columns: 68px 68px 68px 68px 68px;
+    grid-template-columns: 16.5vw 16.5vw 16.5vw 16.5vw 16.5vw;
     gap: 8px;
     padding: 12px 16px;
   }
