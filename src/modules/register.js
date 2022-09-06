@@ -143,7 +143,7 @@ if (window.location.pathname === '/register/') {
         // Google scripts iframe
         const googleIframeDiv = document.querySelector('#googleIframeDiv');
         googleIframeDiv.innerHTML = `<iframe id="reg-ifr" src="
-        https://script.google.com/macros/s/AKfycbxg3R42l7YoL-zXFPzLEfPcydvRWyjf1gQGZaLn-3f4lzRNWAA0vRWbGG33t1__HMNGyw/exec?usr=${uid}&time=${time}" frameborder="0" style="width: 100%; height: 400px; background-color: #0f0f0f;"></iframe>`;
+        https://script.google.com/macros/s/AKfycbxXw1TdvVmWiy1wwhrafKsFWoMHtICEkKIIfNVonlZHO_v14TXt43C_ThqqURpQiYj24g/exec?usr=${uid}&time=${time}" frameborder="0" style="width: 100%; height: 400px; background-color: #0f0f0f;"></iframe>`;
 
         const regSubmitBtn = document.querySelector('#regSubmitBtn');
 
