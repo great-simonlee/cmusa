@@ -3,6 +3,7 @@
 @import './base/color.css';
 @import './base/display.css';
 @import './base/font.css';
+@import './base/normalize.css';
 
 /* Module */
 @import './module/module-header.css';
