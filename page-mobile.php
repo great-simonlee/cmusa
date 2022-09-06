@@ -92,46 +92,6 @@
           <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
           <p class="mbc-desc-price">$3000/月</p>
         </div>
-      </div>
-      <div class="mb-card">
-        <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing2.png') ?>" alt="ChinaMovesUSA">
-        <div class="mb-card-desc">
-          <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
-          <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
-          <p class="mbc-desc-price">$3000/月</p>
-        </div>
-      </div>
-      <div class="mb-card">
-        <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing3.png') ?>" alt="ChinaMovesUSA">
-        <div class="mb-card-desc">
-          <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
-          <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
-          <p class="mbc-desc-price">$3000/月</p>
-        </div>
-      </div>
-      <div class="mb-card">
-        <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing4.png') ?>" alt="ChinaMovesUSA">
-        <div class="mb-card-desc">
-          <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
-          <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
-          <p class="mbc-desc-price">$3000/月</p>
-        </div>
-      </div>
-      <div class="mb-card">
-        <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing5.png') ?>" alt="ChinaMovesUSA">
-        <div class="mb-card-desc">
-          <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
-          <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
-          <p class="mbc-desc-price">$3000/月</p>
-        </div>
-      </div>
-      <div class="mb-card">
-        <img class="mb-card-img" src="<?php echo get_theme_file_uri('/assets/img/example/listing6.png') ?>" alt="ChinaMovesUSA">
-        <div class="mb-card-desc">
-          <p class="mbc-desc-title">让价转租 个人转租【JP 1b1b 客厅】 自带家具，领包入住，白菜价</p>
-          <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 地址：2830 Jackson Park，11101</p>
-          <p class="mbc-desc-price">$3000/月</p>
-        </div>
       </div> -->
     </div>
   </div>
@@ -382,6 +342,11 @@
     <button class="mb-rm-submit" id="mobileRmSubmit">提交</button>
     <!-- RIGHT HERE -->
   </div>
+  <div class="mf-detail-menu" id="mobileFooterDetailMenu" style="display: none;">
+    <div class="mf-detail-item mf-detail-item-lr"><a href="<?php echo site_url('/team') ?>">团队</a></div>
+    <div class="mf-detail-item"><a href="<?php echo site_url('/register') ?>">发布</a></div>
+    <div class="mf-detail-item mf-detail-item-lr"><a href="<?php echo site_url('/aboutus') ?>">加入<br>我们</a></div>
+  </div>
   <div class="m-footer">
     <a href="<?php echo site_url('/mobile') ?>">
       <div class="mf-menu-item">
@@ -389,8 +354,11 @@
         <p>首页</p>
       </div>
     </a>
-    <div class="mf-menu-item ft-more">
+    <div class="mf-menu-item ft-more" id="mobileFooterMoreDefault">
       <img class="mf-menu-more" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-more.png') ?>" alt="ChinaMovesUSA">
+    </div>
+    <div class="mf-menu-item ft-detail" id="mobileFooterDetail" style="display:none;">
+      <img class="mf-menu-more" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-detail.png') ?>" alt="ChinaMovesUSA">
     </div>
     <a href="<?php echo site_url('/mypage') ?>">
       <div class="mf-menu-item">      

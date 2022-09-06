@@ -6809,7 +6809,7 @@ iMac 27"           2560x1440 */
   align-items: center;
   /* justify-content: center; */
   width: 100vw;
-  padding: 3vw 0;
+  padding: 3vw 0 0 0;
 }
 
 .mb-cont {
@@ -7094,7 +7094,7 @@ iMac 27"           2560x1440 */
   color: #fff;
   padding-bottom: 36px;
   background-color: #000;
-  margin-top: 24px;
+  margin-top: 60px;
 }
 
 .mf-menu-item {
@@ -7104,6 +7104,7 @@ iMac 27"           2560x1440 */
   align-items: center;
   color: #fff;
   margin: 16px 0;
+  transition: 400ms;
 }
 
 .mf-menu-item > p {
@@ -7122,6 +7123,15 @@ iMac 27"           2560x1440 */
   background-color: #000;
   transform: translateY(-40px);
   border-radius: 50%;
+}
+
+.ft-detail {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  transform: translateY(-40px) rotate(45deg);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .mf-menu-more {
@@ -7149,6 +7159,36 @@ iMac 27"           2560x1440 */
 
 .mobile-dropdown-item > a {
   color: #fff;
+}
+
+.mf-detail-menu {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(20px);
+}
+
+.mf-detail-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mf-detail-item > a {
+  color: #fff;
+}
+
+.mf-detail-item-lr {
+  margin: 0px 6px 0 6px;
+  transform: translateY(32px);
 }
 
 /* Cell phone */

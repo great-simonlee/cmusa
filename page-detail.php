@@ -61,104 +61,20 @@
       </div>
       <div class="dtd-content-cont">
         <p class="dtd-title">房屋配置</p>
-        <div class="dtdc-fea-cont">
-          <div class="dtdc-fea-card">
+        <div class="dtdc-fea-cont" id="detailFeatures">
+          <!-- <div class="dtdc-fea-card">
             <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Washer.png') ?>" alt="">
             <p>洗衣机</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Dryer.png') ?>" alt="">
-            <p>烘干机</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Dishwasher.png') ?>" alt="">
-            <p>洗碗机</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Balcony.png') ?>" alt="">
-            <p>阳台</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/AC.png') ?>" alt="">
-            <p>中央空调</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Rangehood.png') ?>" alt="">
-            <p>抽油烟机</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="dtd-content-cont">
         <p class="dtd-title">大楼设施</p>
-        <div class="dtdc-fea-cont">
-          <div class="dtdc-fea-card">
+        <div class="dtdc-fea-cont" id="detailAmenities">
+          <!-- <div class="dtdc-fea-card">
             <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Concierge.png') ?>" alt="">
             <p>24h门卫</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Gym.png') ?>" alt="">
-            <p>健身房</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Lounge.png') ?>" alt="">
-            <p>Lobby</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Elevator.png') ?>" alt="">
-            <p>电梯</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/PetFriendly.png') ?>" alt="">
-            <p>宠物友好</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Garage.png') ?>" alt="">
-            <p>车库/车位</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/RooftopDeck.png') ?>" alt="">
-            <p>景观露台</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/LaundryRoom.png') ?>" alt="">
-            <p>洗衣房</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Basketball.png') ?>" alt="">
-            <p>篮球场</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/BBQ.png') ?>" alt="">
-            <p>BBQ</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Billiard.png') ?>" alt="">
-            <p>台球场</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Golf.png') ?>" alt="">
-            <p>高尔夫</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Kitchen.png') ?>" alt="">
-            <p>公用厨房</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Pool.png') ?>" alt="">
-            <p>泳池</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Tennis.png') ?>" alt="">
-            <p>网球场</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Theater.png') ?>" alt="">
-            <p>观影室</p>
-          </div>
-          <div class="dtdc-fea-card">
-            <img src="<?php echo get_theme_file_uri('/assets/img/icon/detail/white/Wifi.png') ?>" alt="">
-            <p>公共无线网</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="dtd-content-cont" id="locContainer">

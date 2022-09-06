@@ -58,13 +58,111 @@ __webpack_require__.r(__webpack_exports__);
 
 if (window.location.pathname === '/detail/') {
   window.addEventListener('DOMContentLoaded', () => {
-    console.log('detail');
     const db = firebase.firestore();
     const storage = firebase.storage();
     const auth = firebase.auth();
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('li');
     const subImgCont = document.querySelector('#detailSubImgCont');
+
+    const translateToChinese = fea => {
+      switch (fea) {
+        case 'Washer':
+          return '洗衣机';
+          break;
+
+        case 'Dryer':
+          return '烘干机';
+          break;
+
+        case 'Dishwasher':
+          return '洗碗机';
+          break;
+
+        case 'AC':
+          return '空调';
+          break;
+
+        case 'Rangehood':
+          return '抽油烟机';
+          break;
+
+        case 'Balcony':
+          return '阳台';
+          break;
+
+        case 'Concierge':
+          return '24h门卫';
+          break;
+
+        case 'Gym':
+          return '健身房';
+          break;
+
+        case 'Lounge':
+          return 'Lobby';
+          break;
+
+        case 'Elevator':
+          return '电梯';
+          break;
+
+        case 'Garage':
+          return '车库/车位';
+          break;
+
+        case 'PetFriendly':
+          return '宠物友好';
+          break;
+
+        case 'RooftopDeck':
+          return '景观露台';
+          break;
+
+        case 'LaundryRoom':
+          return '洗衣房';
+          break;
+
+        case 'Basketball':
+          return '篮球场';
+          break;
+
+        case 'BBQ':
+          return 'BBQ';
+          break;
+
+        case 'Billiard':
+          return '台球场';
+          break;
+
+        case 'Golf':
+          return '高尔夫';
+          break;
+
+        case 'Kitchen':
+          return '公用厨房';
+          break;
+
+        case 'Pool':
+          return '泳池';
+          break;
+
+        case 'Tennis':
+          return '网球场';
+          break;
+
+        case 'Theater':
+          return '观影室';
+          break;
+
+        case 'Wifi':
+          return '公共无线网';
+          break;
+
+        default:
+          break;
+      }
+    };
 
     const stringCon = num => {
       const numst = String(num);
@@ -85,9 +183,7 @@ if (window.location.pathname === '/detail/') {
       return numed;
     };
 
-    console.log(myParam);
     db.collection('rentListing').doc(myParam).get().then(res => {
-      console.log(res.data());
       document.querySelector('#detailLoadingSpinnerDiv').style.display = 'none';
       document.querySelector('#detailContDiv').style.display = 'flex';
       document.querySelector('#detailTitle').innerHTML = res.data().title;
@@ -95,6 +191,22 @@ if (window.location.pathname === '/detail/') {
         el.innerHTML = stringCon(res.data().price);
       });
       document.querySelector('#detailDescription').innerHTML = res.data().description;
+      res.data().features.forEach(fea => {
+        document.querySelector('#detailFeatures').innerHTML += `
+          <div class="dtdc-fea-card">
+            <img src="${window.location.origin}/wp-content/themes/cmu/assets/img/icon/detail/white/${fea}.png" alt="">
+            <p>${translateToChinese(fea)}</p>
+          </div>
+          `;
+      });
+      res.data().amenities.forEach(fea => {
+        document.querySelector('#detailAmenities').innerHTML += `
+          <div class="dtdc-fea-card">
+            <img src="${window.location.origin}/wp-content/themes/cmu/assets/img/icon/detail/white/${fea}.png" alt="">
+            <p>${translateToChinese(fea)}</p>
+          </div>
+          `;
+      });
       document.querySelectorAll('.detailBed').forEach(el => {
         el.innerHTML = res.data().type[0];
       });
@@ -887,6 +999,21 @@ if (window.location.pathname === '/mobile/') {
           mobileFrontRoommate.style.display = 'block';
         }
       });
+    });
+    const mobileFooterMoreDefault = document.querySelector('#mobileFooterMoreDefault');
+    const mobileFooterDetail = document.querySelector('#mobileFooterDetail');
+    const mobileFooterDetailMenu = document.querySelector('#mobileFooterDetailMenu');
+    mobileFooterMoreDefault.addEventListener('click', () => {
+      console.log('more btn');
+      mobileFooterMoreDefault.style.display = 'none';
+      mobileFooterDetail.style.display = 'flex';
+      mobileFooterDetailMenu.style.display = 'flex';
+    });
+    mobileFooterDetail.addEventListener('click', () => {
+      console.log('detail');
+      mobileFooterMoreDefault.style.display = 'flex';
+      mobileFooterDetail.style.display = 'none';
+      mobileFooterDetailMenu.style.display = 'none';
     }); //
   });
 }

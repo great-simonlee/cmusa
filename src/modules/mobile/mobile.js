@@ -215,6 +215,25 @@ if (window.location.pathname === '/mobile/') {
       });
     });
 
+    const mobileFooterMoreDefault = document.querySelector(
+      '#mobileFooterMoreDefault'
+    );
+    const mobileFooterDetail = document.querySelector('#mobileFooterDetail');
+    const mobileFooterDetailMenu = document.querySelector(
+      '#mobileFooterDetailMenu'
+    );
+    mobileFooterMoreDefault.addEventListener('click', () => {
+      console.log('more btn');
+      mobileFooterMoreDefault.style.display = 'none';
+      mobileFooterDetail.style.display = 'flex';
+      mobileFooterDetailMenu.style.display = 'flex';
+    });
+    mobileFooterDetail.addEventListener('click', () => {
+      console.log('detail');
+      mobileFooterMoreDefault.style.display = 'flex';
+      mobileFooterDetail.style.display = 'none';
+      mobileFooterDetailMenu.style.display = 'none';
+    });
     //
   });
 }
