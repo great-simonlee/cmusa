@@ -20,3 +20,11 @@ a,
 a:focus {
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
