@@ -25,6 +25,9 @@
         《 CHINA MOVES USA 房产用户协议 》
       </label>
     </div>
+    <div>
+      <span style="color: #fff">已有帐号？ </span><a class="signup-to-login" href="<?php echo site_url('/member-login') ?>">登录</a>
+    </div>
     <button class="mBody-signup-btn" id="signUpBtn">注册</button>
   </div>
   <div class="mBody-ban-cont">

@@ -15,6 +15,10 @@
   text-decoration: underline;
 }
 
+.signup-to-login {
+  color: #f78915;
+}
+
 /* Cell phone */
 @media (min-width: 200px) {
   .mBody {
@@ -156,6 +160,10 @@
   .mBody-signup-btn:hover {
     background-color: #fff;
     color: #f78915;
+  }
+
+  .change-signup-login-div {
+    margin-top: 24px;
   }
 }
 /* Tablets */
@@ -340,6 +348,10 @@
     font-size: 48px;
     font-weight: 900;
   }
+
+  .change-signup-login-div {
+    margin: 24px 0;
+  }
 }
 /* MacBook Pro */
 @media (min-width: 1024px) {
@@ -496,6 +508,10 @@
     font-family: lato;
     font-size: 64px;
     font-weight: 900;
+  }
+
+  .change-signup-login-div {
+    margin: 24px 0 0 0;
   }
 }
 /* Extra large devices */

@@ -212,11 +212,12 @@
 
   .rent-listing-cont {
     display: flex;
+    justify-content: space-between;
     width: 86vw;
   }
 
   .rent-listing-card {
-    width: 66vw;
+    width: 70%;
     /* background-color: blue; */
   }
 
@@ -291,8 +292,8 @@
   }
 
   .rent-listing-map {
-    width: 20vw;
-    /* height: 200px; */
+    width: 30%;
+    height: 480px;
     /* background-color: violet; */
   }
 
@@ -300,7 +301,7 @@
     /* position: fixed;
     right: 0; */
     width: 100%;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -426,11 +427,12 @@
 
   .rent-listing-cont {
     display: flex;
+    justify-content: space-between;
     width: 86vw;
   }
 
   .rent-listing-card {
-    width: 66vw;
+    width: 66%;
     /* background-color: blue; */
   }
 
@@ -493,14 +495,10 @@
   }
 
   .rent-listing-map {
-    width: 28vw;
-    /* height: 200px; */
-    /* background-color: violet; */
+    width: 34%;
   }
 
   .rent-listing-map-img {
-    /* position: fixed;
-    right: 0; */
     width: 100%;
     height: 640px;
     object-fit: cover;
@@ -703,13 +701,9 @@
   .rent-listing-map {
     width: 25%;
     height: 640px;
-    /* height: 200px; */
-    /* background-color: violet; */
   }
 
   .rent-listing-map-img {
-    /* position: fixed;
-    right: 0; */
     width: 100%;
     height: 640px;
     object-fit: cover;
@@ -750,6 +744,9 @@
   .rent-listing-ls {
     width: 540px;
     object-fit: cover;
+  }
+
+  .rentStickyEle {
   }
 }
 /* Extra large devices */

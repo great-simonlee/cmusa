@@ -1150,6 +1150,8 @@ footer {
   }
 
   .main-rent-img {
+    width: 160px;
+    height: 150px;
     border-radius: 12px;
   }
 
@@ -1162,6 +1164,7 @@ footer {
   }
 
   .main-rent-title {
+    width: 100px;
     font-size: 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -1467,6 +1470,8 @@ footer {
   }
 
   .main-rent-img {
+    width: 240px;
+    height: 200px;
     border-radius: 16px;
   }
 
@@ -1479,8 +1484,8 @@ footer {
   }
 
   .main-rent-title {
-    width: 180px;
-    font-size: 16px;
+    width: 160px;
+    font-size: 14px;
   }
 
   .main-rent-city {
@@ -2199,11 +2204,12 @@ footer {
 
   .rent-listing-cont {
     display: flex;
+    justify-content: space-between;
     width: 86vw;
   }
 
   .rent-listing-card {
-    width: 66vw;
+    width: 70%;
     /* background-color: blue; */
   }
 
@@ -2278,8 +2284,8 @@ footer {
   }
 
   .rent-listing-map {
-    width: 20vw;
-    /* height: 200px; */
+    width: 30%;
+    height: 480px;
     /* background-color: violet; */
   }
 
@@ -2287,7 +2293,7 @@ footer {
     /* position: fixed;
     right: 0; */
     width: 100%;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -2413,11 +2419,12 @@ footer {
 
   .rent-listing-cont {
     display: flex;
+    justify-content: space-between;
     width: 86vw;
   }
 
   .rent-listing-card {
-    width: 66vw;
+    width: 66%;
     /* background-color: blue; */
   }
 
@@ -2480,14 +2487,10 @@ footer {
   }
 
   .rent-listing-map {
-    width: 28vw;
-    /* height: 200px; */
-    /* background-color: violet; */
+    width: 34%;
   }
 
   .rent-listing-map-img {
-    /* position: fixed;
-    right: 0; */
     width: 100%;
     height: 640px;
     object-fit: cover;
@@ -2690,13 +2693,9 @@ footer {
   .rent-listing-map {
     width: 25%;
     height: 640px;
-    /* height: 200px; */
-    /* background-color: violet; */
   }
 
   .rent-listing-map-img {
-    /* position: fixed;
-    right: 0; */
     width: 100%;
     height: 640px;
     object-fit: cover;
@@ -2738,6 +2737,9 @@ footer {
     width: 540px;
     object-fit: cover;
   }
+
+  .rentStickyEle {
+  }
 }
 /* Extra large devices */
 @media (min-width: 1920px) {
@@ -2761,6 +2763,10 @@ footer {
 
 .backToLogIn:hover {
   text-decoration: underline;
+}
+
+.signup-to-login {
+  color: #f78915;
 }
 
 /* Cell phone */
@@ -2904,6 +2910,10 @@ footer {
   .mBody-signup-btn:hover {
     background-color: #fff;
     color: #f78915;
+  }
+
+  .change-signup-login-div {
+    margin-top: 24px;
   }
 }
 /* Tablets */
@@ -3088,6 +3098,10 @@ footer {
     font-size: 48px;
     font-weight: 900;
   }
+
+  .change-signup-login-div {
+    margin: 24px 0;
+  }
 }
 /* MacBook Pro */
 @media (min-width: 1024px) {
@@ -3244,6 +3258,10 @@ footer {
     font-family: lato;
     font-size: 64px;
     font-weight: 900;
+  }
+
+  .change-signup-login-div {
+    margin: 24px 0 0 0;
   }
 }
 /* Extra large devices */
@@ -7167,6 +7185,7 @@ iMac 27"           2560x1440 */
   justify-content: center;
   align-items: center;
   transform: translateY(20px);
+  transition: opacity 500ms;
 }
 
 .mf-detail-item {

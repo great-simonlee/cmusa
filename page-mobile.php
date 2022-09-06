@@ -342,7 +342,7 @@
     <button class="mb-rm-submit" id="mobileRmSubmit">提交</button>
     <!-- RIGHT HERE -->
   </div>
-  <div class="mf-detail-menu" id="mobileFooterDetailMenu" style="display: none;">
+  <div class="mf-detail-menu" id="mobileFooterDetailMenu" style="visibility: hidden; opacity: 0;">
     <div class="mf-detail-item mf-detail-item-lr"><a href="<?php echo site_url('/team') ?>">团队</a></div>
     <div class="mf-detail-item"><a href="<?php echo site_url('/register') ?>">发布</a></div>
     <div class="mf-detail-item mf-detail-item-lr"><a href="<?php echo site_url('/aboutus') ?>">加入<br>我们</a></div>

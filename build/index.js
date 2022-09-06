@@ -1007,13 +1007,15 @@ if (window.location.pathname === '/mobile/') {
       console.log('more btn');
       mobileFooterMoreDefault.style.display = 'none';
       mobileFooterDetail.style.display = 'flex';
-      mobileFooterDetailMenu.style.display = 'flex';
+      mobileFooterDetailMenu.style.visibility = 'visible';
+      mobileFooterDetailMenu.style.opacity = '1';
     });
     mobileFooterDetail.addEventListener('click', () => {
       console.log('detail');
       mobileFooterMoreDefault.style.display = 'flex';
       mobileFooterDetail.style.display = 'none';
-      mobileFooterDetailMenu.style.display = 'none';
+      mobileFooterDetailMenu.style.visibility = 'hidden';
+      mobileFooterDetailMenu.style.opacity = '0';
     }); //
   });
 }
@@ -1031,7 +1033,12 @@ if (window.location.pathname === '/mypage/') {
     const auth = firebase.auth();
     auth.onAuthStateChanged(user => {
       if (!user) {
-        window.location.replace('/');
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+          // Take the user to a different screen here.
+          window.location = '/mobile';
+        } else {
+          window.location.replace('/');
+        }
       } else {
         const db = firebase.firestore();
         const uid = user.uid;
@@ -1814,9 +1821,20 @@ if (window.location.pathname === '/rent/') {
       } else if (window.pageYOffset > stickyTopLoc & window.pageYOffset < topLocEle - 720) {
         contactEle.classList.add('rentStickyEle');
         contactEle.style.top = '0px';
-        contactEle.style.right = '14.9vw';
-        contactEle.style.width = '304px';
-        contactEle.style.height = '640px';
+
+        if (window.innerWidth >= 768 & window.innerWidth < 1024) {
+          contactEle.style.right = `7vw`;
+          contactEle.style.width = `${window.innerWidth * 0.86 * 0.3}px`;
+          contactEle.style.height = '480px';
+        } else if (window.innerWidth >= 1024 & window.innerWidth < 1440) {
+          contactEle.style.right = `7vw`;
+          contactEle.style.width = `${window.innerWidth * 0.86 * 0.34}px`;
+          contactEle.style.height = '640px';
+        } else if (window.innerWidth >= 1440) {
+          contactEle.style.right = `${window.innerWidth / 2 - 607}px`;
+          contactEle.style.width = '304px';
+          contactEle.style.height = '640px';
+        }
       } else {
         contactEle.style.top = `${topLocEle - window.pageYOffset - 720}px`;
       }

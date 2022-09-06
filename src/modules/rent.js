@@ -348,9 +348,19 @@ if (window.location.pathname === '/rent/') {
       ) {
         contactEle.classList.add('rentStickyEle');
         contactEle.style.top = '0px';
-        contactEle.style.right = '14.9vw';
-        contactEle.style.width = '304px';
-        contactEle.style.height = '640px';
+        if ((window.innerWidth >= 768) & (window.innerWidth < 1024)) {
+          contactEle.style.right = `7vw`;
+          contactEle.style.width = `${window.innerWidth * 0.86 * 0.3}px`;
+          contactEle.style.height = '480px';
+        } else if ((window.innerWidth >= 1024) & (window.innerWidth < 1440)) {
+          contactEle.style.right = `7vw`;
+          contactEle.style.width = `${window.innerWidth * 0.86 * 0.34}px`;
+          contactEle.style.height = '640px';
+        } else if (window.innerWidth >= 1440) {
+          contactEle.style.right = `${window.innerWidth / 2 - 607}px`;
+          contactEle.style.width = '304px';
+          contactEle.style.height = '640px';
+        }
       } else {
         contactEle.style.top = `${topLocEle - window.pageYOffset - 720}px`;
       }

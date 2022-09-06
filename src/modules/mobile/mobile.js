@@ -226,13 +226,15 @@ if (window.location.pathname === '/mobile/') {
       console.log('more btn');
       mobileFooterMoreDefault.style.display = 'none';
       mobileFooterDetail.style.display = 'flex';
-      mobileFooterDetailMenu.style.display = 'flex';
+      mobileFooterDetailMenu.style.visibility = 'visible';
+      mobileFooterDetailMenu.style.opacity = '1';
     });
     mobileFooterDetail.addEventListener('click', () => {
       console.log('detail');
       mobileFooterMoreDefault.style.display = 'flex';
       mobileFooterDetail.style.display = 'none';
-      mobileFooterDetailMenu.style.display = 'none';
+      mobileFooterDetailMenu.style.visibility = 'hidden';
+      mobileFooterDetailMenu.style.opacity = '0';
     });
     //
   });

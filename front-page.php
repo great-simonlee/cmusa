@@ -113,36 +113,52 @@
   </div>
   <div class="main-rent-listing" id="HOTAreaCat" style="display: none;">
     <div class="main-rent-card" url-search="/rent/?area=uptown">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/upperman.png') ?>" alt="area">
-      <div class="main-area-info"><p>Upper<br>Manhattan</p></div>
+      <a href="<?php echo site_url('/rent/?area=uptown') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/upperman.png') ?>" alt="area">
+        <div class="main-area-info"><p>Upper<br>Manhattan</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=midtown">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/midman.png') ?>" alt="area">
-      <div class="main-area-info"><p>Midtown<br>Manhattan</p></div>
+      <a href="<?php echo site_url('/rent/?area=midtown') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/midman.png') ?>" alt="area">
+        <div class="main-area-info"><p>Midtown<br>Manhattan</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=downtown">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/lowerman.png') ?>" alt="area">
-      <div class="main-area-info"><p>Lower<br>Manhattan</p></div>
+      <a href="<?php echo site_url('/rent/?area=downtown') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/lowerman.png') ?>" alt="area">
+        <div class="main-area-info"><p>Lower<br>Manhattan</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=lic">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/lic.png') ?>" alt="area">
-      <div class="main-area-info"><p>Long<br>Island<br>City</p></div>
+      <a href="<?php echo site_url('/rent/?area=lic') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/lic.png') ?>" alt="area">
+        <div class="main-area-info"><p>Long<br>Island<br>City</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=flushing">
-      <img class="main-rent-img" style="filter: grayscale(50%);" src="<?php echo get_theme_file_uri('/assets/img/area/flushing.png') ?>" alt="area">
-      <div class="main-area-info"><p>Flushing</p></div>
+      <a href="<?php echo site_url('/rent/?area=flushing') ?>">
+        <img class="main-rent-img" style="filter: grayscale(50%);" src="<?php echo get_theme_file_uri('/assets/img/area/flushing.png') ?>" alt="area">
+        <div class="main-area-info"><p>Flushing</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=njcity">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/jserseycity.png') ?>" alt="area">
-      <div class="main-area-info"><p>Jersey<br>City</p></div>
+      <a href="<?php echo site_url('/rent/?area=njcity') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/jserseycity.png') ?>" alt="area">
+        <div class="main-area-info"><p>Jersey<br>City</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=brooklyn">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/bk.png') ?>" alt="area">
-      <div class="main-area-info"><p>Brooklyn</p></div>
+      <a href="<?php echo site_url('/rent/?area=brooklyn') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/bk.png') ?>" alt="area">
+        <div class="main-area-info"><p>Brooklyn</p></div>
+      </a>
     </div>
     <div class="main-rent-card" url-search="/rent/?area=queens">
-      <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/queens.png') ?>" alt="area">
-      <div class="main-area-info"><p>Queens</p></div>
+      <a href="<?php echo site_url('/rent/?area=queens') ?>">
+        <img class="main-rent-img" src="<?php echo get_theme_file_uri('/assets/img/area/queens.png') ?>" alt="area">
+        <div class="main-area-info"><p>Queens</p></div>
+      </a>
     </div>
   </div>
   <button class="main-rent-more-btn"><a href="/rent" style="color:#fff">查看所有房源 &#160;</a><span class="more-btn-spe">&rsaquo;</span></button>

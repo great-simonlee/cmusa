@@ -3,7 +3,16 @@ if (window.location.pathname === '/mypage/') {
     const auth = firebase.auth();
     auth.onAuthStateChanged((user) => {
       if (!user) {
-        window.location.replace('/');
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          // Take the user to a different screen here.
+          window.location = '/mobile';
+        } else {
+          window.location.replace('/');
+        }
       } else {
         const db = firebase.firestore();
         const uid = user.uid;
