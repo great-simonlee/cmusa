@@ -205,7 +205,7 @@ if (window.location.pathname === '/detail/') {
       res.data().amenities.forEach(fea => {
         document.querySelector('#detailAmenities').innerHTML += `
           <div class="dtdc-fea-card">
-            <img src="${window.location.origin}/wp-content/themes/cmu/assets/img/icon/detail/white/${fea}.png" alt="">
+            <img src="${window.location.origin}/wp-content/uploads/2022/09/${fea}.png">
             <p>${translateToChinese(fea)}</p>
           </div>
           `;
