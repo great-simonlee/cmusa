@@ -343,38 +343,31 @@ if (window.location.pathname === '/detail/') {
                 // document.querySelector('#inquiry').value =
                 // document.querySelector('#inquiry').value =
 
-                document.querySelector(
-                  '#mbdetailContactUsNowLS'
-                ).style.display = 'none';
-                document.querySelector(
-                  '#mbinquirySubmissionMsg'
-                ).style.display = 'flex';
+                setTimeout(() => {
+                  emailjs.init('user_02aBegGFQaEbfNQTDpYLP');
 
-                // setTimeout(() => {
-                //   emailjs.init('user_02aBegGFQaEbfNQTDpYLP');
+                  emailjs
+                    .sendForm(
+                      'service_un17shn',
+                      'template_gjvuym4',
+                      inquirySubmitForm
+                    )
+                    .then(() => {
+                      // console.log();
+                      document.querySelector(
+                        '#mbdetailContactUsNowLS'
+                      ).style.display = 'none';
+                      document.querySelector(
+                        '#mbinquirySubmissionMsg'
+                      ).style.display = 'flex';
+                    });
 
-                //   emailjs
-                //     .sendForm(
-                //       'service_un17shn',
-                //       'template_gjvuym4',
-                //       inquirySubmitForm
-                //     )
-                //     .then(() => {
-                //       // console.log();
-                //       document.querySelector(
-                //         '#mbdetailContactUsNowLS'
-                //       ).style.display = 'none';
-                //       document.querySelector(
-                //         '#mbinquirySubmissionMsg'
-                //       ).style.display = 'flex';
-                //     });
-
-                //   // emailjs.sendForm(
-                //   //   'service_un17shn',
-                //   //   'template_gjvuym4',
-                //   //   inquirySubmitForm
-                //   // );
-                // }, 1000);
+                  // emailjs.sendForm(
+                  //   'service_un17shn',
+                  //   'template_gjvuym4',
+                  //   inquirySubmitForm
+                  // );
+                }, 1000);
               }
             });
           });
