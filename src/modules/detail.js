@@ -296,6 +296,89 @@ if (window.location.pathname === '/detail/') {
             });
           });
 
+        document
+          .querySelector('#mbdetailContactUsNow')
+          .addEventListener('click', () => {
+            document.querySelector('#mbdetailContactUsNow').style.display =
+              'none';
+            document.querySelector('#mbdetailContactUsNowLS').style.display =
+              'block';
+
+            const inquirySubmitForm =
+              document.querySelector('#inquirySubmitForm');
+
+            auth.onAuthStateChanged((user) => {
+              if (!user) {
+                window.location.replace('/member-login');
+              } else {
+                var proIn = res.data();
+                const timestamp = new Date(res.data().writetime);
+
+                db.collection('userInfo')
+                  .doc(user.uid)
+                  .get()
+                  .then((res) => {
+                    proIn['request'] = res.data();
+                    document.querySelector('#inquiryUsername').value =
+                      res.data().username;
+                    document.querySelector('#inquiryEmail').value =
+                      res.data().email;
+                    document.querySelector('#inquiryNumber').value =
+                      res.data().number;
+                    document.querySelector('#inquiryWeChat').value =
+                      res.data().wechat;
+                  });
+
+                document.querySelector('#inquiryTitle').value =
+                  res.data().title;
+                document.querySelector('#inquiryAddress').value =
+                  res.data().address;
+                document.querySelector('#inquiryType').value = res.data().type;
+                document.querySelector('#inquiryPrice').value =
+                  res.data().price;
+                document.querySelector('#inquiryDate').value = res.data().date;
+                document.querySelector('#inquiryTime').value = `${
+                  timestamp.getMonth() + 1
+                }/${timestamp.getDate()}/${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes()}`;
+                // document.querySelector('#inquiry').value =
+                // document.querySelector('#inquiry').value =
+
+                document.querySelector(
+                  '#mbdetailContactUsNowLS'
+                ).style.display = 'none';
+                document.querySelector(
+                  '#mbinquirySubmissionMsg'
+                ).style.display = 'flex';
+
+                // setTimeout(() => {
+                //   emailjs.init('user_02aBegGFQaEbfNQTDpYLP');
+
+                //   emailjs
+                //     .sendForm(
+                //       'service_un17shn',
+                //       'template_gjvuym4',
+                //       inquirySubmitForm
+                //     )
+                //     .then(() => {
+                //       // console.log();
+                //       document.querySelector(
+                //         '#mbdetailContactUsNowLS'
+                //       ).style.display = 'none';
+                //       document.querySelector(
+                //         '#mbinquirySubmissionMsg'
+                //       ).style.display = 'flex';
+                //     });
+
+                //   // emailjs.sendForm(
+                //   //   'service_un17shn',
+                //   //   'template_gjvuym4',
+                //   //   inquirySubmitForm
+                //   // );
+                // }, 1000);
+              }
+            });
+          });
+
         //////
       })
       .catch((err) => {

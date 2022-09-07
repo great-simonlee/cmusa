@@ -50,7 +50,9 @@
               <p>中介费：<br><span class="detailBroker"></span></p>
             </div>
           </div>
-          <!-- <button class="dt-info-btn">现在联系</button> -->
+          <button class="dt-info-btn" id="mbdetailContactUsNow">现在联系</button>
+          <div class="dt-info-btn-ls" id="mbdetailContactUsNowLS" style="display: none;"></div>
+          <div class="dt-info-btn-msg" id="mbinquirySubmissionMsg" style="display: none;">已发送</div>
         </div>
       </div>
       <div class="dtd-content-cont">
