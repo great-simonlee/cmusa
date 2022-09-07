@@ -121,7 +121,7 @@ if (window.location.pathname === '/detail/') {
           <div class="dtdc-fea-card">
             <img src="${
               window.location.origin
-            }/wp-content/themes/cmu/assets/img/icon/detail/white/${fea}.png" alt="">
+            }/wp-content/uploads/2022/09/${fea}.png">
             <p>${translateToChinese(fea)}</p>
           </div>
           `;
