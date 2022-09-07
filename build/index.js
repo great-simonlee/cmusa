@@ -30,10 +30,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_modules_detail_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_src_modules_detail_js__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _src_modules_rent_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/modules/rent.js */ "./src/modules/rent.js");
 /* harmony import */ var _src_modules_rent_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_src_modules_rent_js__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/modules/mobile/mobile.js */ "./src/modules/mobile/mobile.js");
-/* harmony import */ var _src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _src_modules_verify_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/modules/verify.js */ "./src/modules/verify.js");
+/* harmony import */ var _src_modules_verify_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_src_modules_verify_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/modules/mobile/mobile.js */ "./src/modules/mobile/mobile.js");
+/* harmony import */ var _src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_src_modules_mobile_mobile_js__WEBPACK_IMPORTED_MODULE_12__);
 // CSS
  // JS
+
 
 
 
@@ -272,7 +275,48 @@ if (window.location.pathname === '/detail/') {
             'fill-opacity': 0.5
           }
         });
-      });
+      }); // ssssssss
+
+      document.querySelector('#detailContactUsNow').addEventListener('click', () => {
+        document.querySelector('#detailContactUsNow').style.display = 'none';
+        document.querySelector('#detailContactUsNowLS').style.display = 'block';
+        const inquirySubmitForm = document.querySelector('#inquirySubmitForm');
+        auth.onAuthStateChanged(user => {
+          if (!user) {
+            window.location.replace('/member-login');
+          } else {
+            var proIn = res.data();
+            const timestamp = new Date(res.data().writetime);
+            db.collection('userInfo').doc(user.uid).get().then(res => {
+              proIn['request'] = res.data();
+              document.querySelector('#inquiryUsername').value = res.data().username;
+              document.querySelector('#inquiryEmail').value = res.data().email;
+              document.querySelector('#inquiryNumber').value = res.data().number;
+              document.querySelector('#inquiryWeChat').value = res.data().wechat;
+            });
+            document.querySelector('#inquiryTitle').value = res.data().title;
+            document.querySelector('#inquiryAddress').value = res.data().address;
+            document.querySelector('#inquiryType').value = res.data().type;
+            document.querySelector('#inquiryPrice').value = res.data().price;
+            document.querySelector('#inquiryDate').value = res.data().date;
+            document.querySelector('#inquiryTime').value = `${timestamp.getMonth() + 1}/${timestamp.getDate()}/${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes()}`; // document.querySelector('#inquiry').value =
+            // document.querySelector('#inquiry').value =
+
+            setTimeout(() => {
+              emailjs.init('user_02aBegGFQaEbfNQTDpYLP');
+              emailjs.sendForm('service_un17shn', 'template_gjvuym4', inquirySubmitForm).then(() => {
+                // console.log();
+                document.querySelector('#detailContactUsNowLS').style.display = 'none';
+                document.querySelector('#inquirySubmissionMsg').style.display = 'flex';
+              }); // emailjs.sendForm(
+              //   'service_un17shn',
+              //   'template_gjvuym4',
+              //   inquirySubmitForm
+              // );
+            }, 1000);
+          }
+        });
+      }); //////
     }).catch(err => {
       console.log(err);
     });
@@ -296,7 +340,32 @@ if (window.location.pathname === '/detail/') {
       } else {
         contactEle.classList.remove('stickyEle');
       }
-    };
+    }; // document
+    //   .querySelector('#detailContactUsNow')
+    //   .addEventListener('click', () => {
+    //     console.log('hello');
+    //     document.querySelector('#detailContactActive').style.display = 'flex';
+    //   });
+    // document.querySelector('#closeModalBtn').addEventListener('click', () => {
+    //   document.querySelector('#detailContactActive').style.display = 'none';
+    // });
+    // auth.onAuthStateChanged((user) => {
+    //   if (user) {
+    //     document.querySelector('#contactUsNowName').value = user.displayName;
+    //     document.querySelector('#contactUsNowEmail').value = user.email;
+    //     // console.log(user);
+    //     db.collection('userInfo')
+    //       .doc(user.uid)
+    //       .get()
+    //       .then((res) => {
+    //         document.querySelector('#contactUsNowNumber').value =
+    //           res.data().number;
+    //         document.querySelector('#contactUsNowWeChat').value =
+    //           res.data().wechat;
+    //       });
+    //   }
+    // });
+
   });
 }
 
@@ -310,6 +379,16 @@ if (window.location.pathname === '/detail/') {
 
 window.addEventListener('DOMContentLoaded', () => {
   const auth = firebase.auth();
+
+  const backToMainPage = () => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      // Take the user to a different screen here.
+      window.location = '/mobile';
+    } else {
+      window.location = '/';
+    }
+  };
+
   auth.onAuthStateChanged(user => {
     if (user) {
       const signUpLogInDiv = document.querySelector('#signUpLogInDiv');
@@ -332,8 +411,12 @@ window.addEventListener('DOMContentLoaded', () => {
         userMenuDiv.style.display = 'none';
       });
 
-      if (window.location.pathname === '/member-login/' || window.location.pathname === '/member-signup/') {
-        document.location.href = '/';
+      if (window.location.pathname === '/member-login/') {
+        backToMainPage();
+      }
+
+      if (window.location.pathname === '/member-signup/') {
+        document.location.href = '/user-verify';
       }
     } else {
       if (window.location.pathname === '/member-login/') {
@@ -351,7 +434,7 @@ window.addEventListener('DOMContentLoaded', () => {
         logInPassword.addEventListener('keypress', function (e) {
           if (e.key === 'Enter') {
             auth.signInWithEmailAndPassword(logInEmail.value, logInPassword.value).then(result => {
-              document.location.href = '/';
+              backToMainPage();
             }).catch(err => {
               window.alert(err);
             });
@@ -364,8 +447,7 @@ window.addEventListener('DOMContentLoaded', () => {
           document.querySelector('#logInBtn').style.display = 'none';
           document.querySelector('#resetPWBox').style.display = 'flex';
           document.querySelector('#forgotEmailSubmitBtn').addEventListener('click', () => {
-            const resetEmailAddress = document.querySelector('#resetPWEmail').value; // console.log(resetEmailAddress);
-
+            const resetEmailAddress = document.querySelector('#resetPWEmail').value;
             auth.sendPasswordResetEmail(resetEmailAddress).then(res => {
               console.log(res);
               console.log('Email sent');
@@ -390,6 +472,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const signUpEmail = document.querySelector('#signUpEmail');
         const signUpPassword = document.querySelector('#signUpPassword');
         const signUpPasswordCheck = document.querySelector('#signUpPasswordCheck');
+        const signUpNumber = document.querySelector('#signUpNumber');
+        const signUpWeChat = document.querySelector('#signUpWeChat');
         const signUpAgreement = document.querySelector('#userAgreement');
         const signUpBtn = document.querySelector('#signUpBtn');
         signUpBtn.addEventListener('click', () => {
@@ -406,33 +490,19 @@ window.addEventListener('DOMContentLoaded', () => {
                 result.user.updateProfile({
                   displayName: signUpUsername.value
                 }).then(() => {
-                  document.location.href = '/';
+                  window.location = '/user-verify';
                 });
               }).catch(err => {
-                // console.error(err.message);
                 window.alert(err.message);
               });
               console.log('Checked');
             }
           }
         });
-        const db = firebase.firestore();
-        const userInfoRef = db.collection('userInfo');
-        userInfoRef.doc(user.uid).set({
-          username: user.displayName,
-          email: user.email,
-          number: '',
-          wechat: '',
-          membership: ''
-        }).then(res => {
-          console.log(res);
-        }).catch(err => {
-          console.log(err);
-        });
       }
 
       if (window.location.pathname === '/mypage/') {
-        document.location.href = '/';
+        backToMainPage();
       }
     }
   });
@@ -1249,8 +1319,9 @@ if (window.location.pathname === '/register/') {
         };
         const uid = user.uid;
         const time = new Date().getTime();
-        console.log(uid);
-        console.log(time);
+        const poster = user.email; // console.log(uid);
+        // console.log(time);
+
         const pointMapCity = document.querySelector('#rq-city');
         const pointMapAddress = document.querySelector('#rq-address');
         const pointMapZip = document.querySelector('#rq-zip');
@@ -1408,6 +1479,7 @@ if (window.location.pathname === '/register/') {
           newPostingObj.web = 'cm';
           newPostingObj.daddress = regDAddress.value;
           newPostingObj.broker = regBrokerFee.value;
+          newPostingObj.poster = poster;
           regFea.forEach(el => {
             if (el.checked) {
               newPostingObj.features.push(el.getAttribute('data-input'));
@@ -1959,6 +2031,77 @@ if (window.location.pathname === '/roommate/') {
 
       const emailjsSubmission = document.querySelector('#roommateSubmissionForm');
       emailjs.sendForm('service_g17icyc', 'template_v3ay8bh', emailjsSubmission);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/modules/verify.js":
+/*!*******************************!*\
+  !*** ./src/modules/verify.js ***!
+  \*******************************/
+/***/ (() => {
+
+if (window.location.pathname === '/user-verify/') {
+  window.addEventListener('DOMContentLoaded', () => {
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    console.log('user-verify');
+
+    const backToMainPage = () => {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        // Take the user to a different screen here.
+        window.location = '/mobile';
+      } else {
+        window.location = '/';
+      }
+    };
+
+    auth.onAuthStateChanged(user => {
+      if (!user) {
+        backToMainPage();
+      } else {
+        document.querySelector('#verifyUsername').value = user.displayName;
+        document.querySelector('#verifyUsername').disabled = true;
+        document.querySelector('#verifyUsername').style.color = '#c0c0c0';
+        document.querySelector('#verifyEmail').value = user.email;
+        document.querySelector('#verifyEmail').disabled = true;
+        document.querySelector('#verifyEmail').style.color = '#c0c0c0';
+        db.collection('userInfo').doc(user.uid).get().then(res => {
+          if (res.data().number && res.data().wechat) {
+            document.querySelector('#verifyNumber').value = res.data().number;
+            document.querySelector('#verifyNumber').disabled = true;
+            document.querySelector('#verifyNumber').style.color = '#c0c0c0';
+            document.querySelector('#verifyWeChat').value = res.data().wechat;
+            document.querySelector('#verifyWeChat').disabled = true;
+            document.querySelector('#verifyWeChat').style.color = '#c0c0c0';
+            document.querySelector('#verifyBtn').style.display = 'none';
+          } else {
+            console.log('no');
+          }
+        });
+        document.querySelector('#verifyBtn').addEventListener('click', () => {
+          // console.log('submit');
+          document.querySelector('#verifyBtn').innerHTML = ``;
+          document.querySelector('#verifyBtn').style.cursor = `wait`;
+          db.collection('userInfo').doc(user.uid).set({
+            username: user.displayName,
+            email: user.email,
+            number: document.querySelector('#verifyNumber').value,
+            wechat: document.querySelector('#verifyWeChat').value,
+            membership: ''
+          }).then(res => {
+            backToMainPage();
+          }).catch(err => {
+            console.log(err);
+          });
+        }); // Skip back to the main page
+
+        document.querySelector('#skipToMainBtn').addEventListener('click', () => {
+          backToMainPage();
+        });
+      }
     });
   });
 }

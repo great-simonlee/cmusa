@@ -85,6 +85,22 @@
         </div>
       </div>
       <div class="dtd-content-cont" style="display: none;">
+        <form id="inquirySubmitForm">
+          <input id="inquiryUsername" name="inquiryUsername" type="text">
+          <input id="inquiryEmail" name="inquiryEmail" type="text">
+          <input id="inquiryNumber" name="inquiryNumber" type="text">
+          <input id="inquiryWeChat" name="inquiryWeChat" type="text">
+          <input id="inquiryTitle" name="inquiryTitle" type="text">
+          <input id="inquiryAddress" name="inquiryAddress" type="text">
+          <input id="inquiryType" name="inquiryType" type="text">
+          <input id="inquiryPrice" name="inquiryPrice" type="text">
+          <input id="inquiryDate" name="inquiryDate" type="text">
+          <input id="inquiryTime" name="inquiryTime" type="text">
+          <input id="inquiryToEmail" name="inquiryToEmail" type="text" value="simon@newyorkmovesre.com">
+          <!-- <input id="inquiry" name="inquiry" type="text"> -->
+        </form>
+      </div>
+      <div class="dtd-content-cont" style="display: none;">
         <p class="dtd-title">类似房源</p>
         <ul class="dtdc-desc">
           <li class="dtdc-rec-listing">
@@ -123,7 +139,6 @@
             </div>
           </li>
         </ul>
-        
       </div>
     </div>
     <div class="dt-info-cont" id="infoContainer">
@@ -154,10 +169,28 @@
           <p>中介费：</br><span class="detailBroker"></span></p>
         </div>
       </div>
-      <button class="dt-info-btn">现在联系</button>
+      <button class="dt-info-btn" id="detailContactUsNow">现在联系</button>
+      <div class="dt-info-btn-ls" id="detailContactUsNowLS" style="display: none;"></div>
+      <div class="dt-info-btn-msg" id="inquirySubmissionMsg" style="display: none;">已发送</div>
     </div>
   </div>
   <img class="dt-wallpaper" src="<?php echo get_theme_file_uri('/assets/img/banner/member-banner.jpg') ?>">
+</section>
+<section class="dt-contactUsNow-active" id="detailContactActive" style="display: none;">
+  <div class="dt-contactUsNow-modal">
+    <div class="close-contactUsNow-Div">
+      <img class="close-contactUsNow-modal" id="closeModalBtn" style="" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-footer-detail.png') ?>" alt="exit">
+    </div>
+    <div class="dt-contactUsNow-form">
+      <label for="contactUsNowName">姓名: <input class="dt-contactUsNow-input" type="text" id="contactUsNowName"></label>
+      <label for="contactUsNowEmail">电子邮件: <input class="dt-contactUsNow-input" type="text" id="contactUsNowEmail"></label>
+      <label for="contactUsNowNumber">手机号码: <input class="dt-contactUsNow-input" type="text" id="contactUsNowNumber"></label>
+      <label for="contactUsNowWeChat">微信账号: <input class="dt-contactUsNow-input" type="text" id="contactUsNowWeChat"></label>
+      <label for="contactUsNowDate">入住时间: <input class="dt-contactUsNow-input" id="contactUsNowDate" type="date"></label>
+      <label for="contactUsNowDesc">其他: <textarea class="dt-contactUsNow-textarea" name="" id="contactUsNowDesc" cols="30" rows="5" value="I'm interested in this listing."></textarea></label>
+    </div>
+    <div class="dt-contactUsNow-submit"><button id="contactUsNowSubmitBtn">SUBMIT</button></div>
+  </div>  
 </section>
 <div class="m-footer">
   <div class="mf-menu-item">

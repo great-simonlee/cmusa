@@ -12,6 +12,7 @@ import '../src/modules/register.js';
 import '../src/modules/header.js';
 import '../src/modules/detail.js';
 import '../src/modules/rent.js';
+import '../src/modules/verify.js';
 
 // Mobile
 import '../src/modules/mobile/mobile.js';

@@ -1,5 +1,19 @@
 window.addEventListener('DOMContentLoaded', () => {
   const auth = firebase.auth();
+
+  const backToMainPage = () => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      // Take the user to a different screen here.
+      window.location = '/mobile';
+    } else {
+      window.location = '/';
+    }
+  };
+
   auth.onAuthStateChanged((user) => {
     if (user) {
       const signUpLogInDiv = document.querySelector('#signUpLogInDiv');
@@ -24,11 +38,12 @@ window.addEventListener('DOMContentLoaded', () => {
         userMenuDiv.style.display = 'none';
       });
 
-      if (
-        window.location.pathname === '/member-login/' ||
-        window.location.pathname === '/member-signup/'
-      ) {
-        document.location.href = '/';
+      if (window.location.pathname === '/member-login/') {
+        backToMainPage();
+      }
+
+      if (window.location.pathname === '/member-signup/') {
+        document.location.href = '/user-verify';
       }
     } else {
       if (window.location.pathname === '/member-login/') {
@@ -53,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
             auth
               .signInWithEmailAndPassword(logInEmail.value, logInPassword.value)
               .then((result) => {
-                document.location.href = '/';
+                backToMainPage();
               })
               .catch((err) => {
                 window.alert(err);
@@ -71,7 +86,6 @@ window.addEventListener('DOMContentLoaded', () => {
             .addEventListener('click', () => {
               const resetEmailAddress =
                 document.querySelector('#resetPWEmail').value;
-              // console.log(resetEmailAddress);
               auth
                 .sendPasswordResetEmail(resetEmailAddress)
                 .then((res) => {
@@ -102,6 +116,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const signUpPasswordCheck = document.querySelector(
           '#signUpPasswordCheck'
         );
+        const signUpNumber = document.querySelector('#signUpNumber');
+        const signUpWeChat = document.querySelector('#signUpWeChat');
         const signUpAgreement = document.querySelector('#userAgreement');
 
         const signUpBtn = document.querySelector('#signUpBtn');
@@ -125,38 +141,20 @@ window.addEventListener('DOMContentLoaded', () => {
                       displayName: signUpUsername.value,
                     })
                     .then(() => {
-                      document.location.href = '/';
+                      window.location = '/user-verify';
                     });
                 })
                 .catch((err) => {
-                  // console.error(err.message);
                   window.alert(err.message);
                 });
               console.log('Checked');
             }
           }
         });
-        const db = firebase.firestore();
-        const userInfoRef = db.collection('userInfo');
-        userInfoRef
-          .doc(user.uid)
-          .set({
-            username: user.displayName,
-            email: user.email,
-            number: '',
-            wechat: '',
-            membership: '',
-          })
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
       }
 
       if (window.location.pathname === '/mypage/') {
-        document.location.href = '/';
+        backToMainPage();
       }
     }
   });

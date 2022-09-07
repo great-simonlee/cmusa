@@ -157,6 +157,15 @@
     transition: 200ms;
   }
 
+  .mBody-signup-btn:focus {
+    background-image: url('/assets/img/logo/CM_loadingspinner.gif');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px;
+    color: #fff;
+  }
+
   .mBody-signup-btn:hover {
     background-color: #fff;
     color: #f78915;

@@ -38,7 +38,7 @@
       <p class="resetPWbtn" id="resetPWbtn">忘记密码?</p>
     </div>
     <div class="change-signup-login-div">
-    <span style="color: #fff">没有帐号？ </span><a class="signup-to-login" href="<?php echo site_url('/member-signup') ?>">立即注册</a>
+      <span style="color: #fff">没有帐号？ </span><a class="signup-to-login" href="<?php echo site_url('/member-signup') ?>">立即注册</a>
     </div>
     <!-- <div class="mBody-info m-google-login">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/mobile/m-google.png') ?>">  

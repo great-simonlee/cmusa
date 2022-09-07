@@ -28,8 +28,9 @@ if (window.location.pathname === '/register/') {
 
         const uid = user.uid;
         const time = new Date().getTime();
-        console.log(uid);
-        console.log(time);
+        const poster = user.email;
+        // console.log(uid);
+        // console.log(time);
 
         const pointMapCity = document.querySelector('#rq-city');
         const pointMapAddress = document.querySelector('#rq-address');
@@ -199,6 +200,7 @@ if (window.location.pathname === '/register/') {
           newPostingObj.web = 'cm';
           newPostingObj.daddress = regDAddress.value;
           newPostingObj.broker = regBrokerFee.value;
+          newPostingObj.poster = poster;
 
           regFea.forEach((el) => {
             if (el.checked) {

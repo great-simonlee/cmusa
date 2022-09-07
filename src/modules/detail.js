@@ -218,6 +218,85 @@ if (window.location.pathname === '/detail/') {
             },
           });
         });
+
+        // ssssssss
+        document
+          .querySelector('#detailContactUsNow')
+          .addEventListener('click', () => {
+            document.querySelector('#detailContactUsNow').style.display =
+              'none';
+            document.querySelector('#detailContactUsNowLS').style.display =
+              'block';
+
+            const inquirySubmitForm =
+              document.querySelector('#inquirySubmitForm');
+
+            auth.onAuthStateChanged((user) => {
+              if (!user) {
+                window.location.replace('/member-login');
+              } else {
+                var proIn = res.data();
+                const timestamp = new Date(res.data().writetime);
+
+                db.collection('userInfo')
+                  .doc(user.uid)
+                  .get()
+                  .then((res) => {
+                    proIn['request'] = res.data();
+                    document.querySelector('#inquiryUsername').value =
+                      res.data().username;
+                    document.querySelector('#inquiryEmail').value =
+                      res.data().email;
+                    document.querySelector('#inquiryNumber').value =
+                      res.data().number;
+                    document.querySelector('#inquiryWeChat').value =
+                      res.data().wechat;
+                  });
+
+                document.querySelector('#inquiryTitle').value =
+                  res.data().title;
+                document.querySelector('#inquiryAddress').value =
+                  res.data().address;
+                document.querySelector('#inquiryType').value = res.data().type;
+                document.querySelector('#inquiryPrice').value =
+                  res.data().price;
+                document.querySelector('#inquiryDate').value = res.data().date;
+                document.querySelector('#inquiryTime').value = `${
+                  timestamp.getMonth() + 1
+                }/${timestamp.getDate()}/${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes()}`;
+                // document.querySelector('#inquiry').value =
+                // document.querySelector('#inquiry').value =
+
+                setTimeout(() => {
+                  emailjs.init('user_02aBegGFQaEbfNQTDpYLP');
+
+                  emailjs
+                    .sendForm(
+                      'service_un17shn',
+                      'template_gjvuym4',
+                      inquirySubmitForm
+                    )
+                    .then(() => {
+                      // console.log();
+                      document.querySelector(
+                        '#detailContactUsNowLS'
+                      ).style.display = 'none';
+                      document.querySelector(
+                        '#inquirySubmissionMsg'
+                      ).style.display = 'flex';
+                    });
+
+                  // emailjs.sendForm(
+                  //   'service_un17shn',
+                  //   'template_gjvuym4',
+                  //   inquirySubmitForm
+                  // );
+                }, 1000);
+              }
+            });
+          });
+
+        //////
       })
       .catch((err) => {
         console.log(err);
@@ -246,5 +325,33 @@ if (window.location.pathname === '/detail/') {
         contactEle.classList.remove('stickyEle');
       }
     };
+
+    // document
+    //   .querySelector('#detailContactUsNow')
+    //   .addEventListener('click', () => {
+    //     console.log('hello');
+    //     document.querySelector('#detailContactActive').style.display = 'flex';
+    //   });
+
+    // document.querySelector('#closeModalBtn').addEventListener('click', () => {
+    //   document.querySelector('#detailContactActive').style.display = 'none';
+    // });
+
+    // auth.onAuthStateChanged((user) => {
+    //   if (user) {
+    //     document.querySelector('#contactUsNowName').value = user.displayName;
+    //     document.querySelector('#contactUsNowEmail').value = user.email;
+    //     // console.log(user);
+    //     db.collection('userInfo')
+    //       .doc(user.uid)
+    //       .get()
+    //       .then((res) => {
+    //         document.querySelector('#contactUsNowNumber').value =
+    //           res.data().number;
+    //         document.querySelector('#contactUsNowWeChat').value =
+    //           res.data().wechat;
+    //       });
+    //   }
+    // });
   });
 }

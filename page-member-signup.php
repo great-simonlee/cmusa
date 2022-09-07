@@ -4,7 +4,7 @@
     <h2>CHINA MOVES USA 官网</h2>
     <div class="mBody-info">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/user.png') ?>">  
-      <input class="mBody-info-input" id="signUpUsername" type="text" placeholder="用户名">
+      <input class="mBody-info-input" id="signUpUsername" type="text" placeholder="姓名">
     </div>
     <div class="mBody-info">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/email.png') ?>">  
@@ -25,7 +25,7 @@
         《 CHINA MOVES USA 房产用户协议 》
       </label>
     </div>
-    <div>
+    <div style="margin-top: 24px">
       <span style="color: #fff">已有帐号？ </span><a class="signup-to-login" href="<?php echo site_url('/member-login') ?>">登录</a>
     </div>
     <button class="mBody-signup-btn" id="signUpBtn">注册</button>
