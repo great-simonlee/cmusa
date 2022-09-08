@@ -117,6 +117,19 @@
         </div>
       </div>
     </div>
+    <div class="tm-agent-cont">
+      <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/olivia.png') ?>" alt="">
+      <div class="tm-agent-info">
+        <div class="tm-agent-infoOne">
+          <p class="tm-agent-maininfo">Olivia Medley</p>
+          <p class="tm-agent-subinfo">Licensed Salesperson</p>
+        </div>
+        <div class="tm-agent-infoTwo">
+          <p class="tm-agent-subinfo">(770) 656-0250</p>
+          <p class="tm-agent-subinfo">olivia@newyorkmovesre.com</p>
+        </div>
+      </div>
+    </div>
     <br>
   </div>
 </section>
