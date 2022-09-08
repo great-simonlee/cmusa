@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-    <div class="tm-agent-cont">
+    <!-- <div class="tm-agent-cont">
       <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/ying.png') ?>" alt="">
       <div class="tm-agent-info">
         <div class="tm-agent-infoOne">
@@ -101,6 +101,19 @@
         <div class="tm-agent-infoTwo">
           <p class="tm-agent-subinfo">(928) 225-6316</p>
           <p class="tm-agent-subinfo">ying@newyorkmovesre.com</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="tm-agent-cont">
+      <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/carrie.png') ?>" alt="">
+      <div class="tm-agent-info">
+        <div class="tm-agent-infoOne">
+          <p class="tm-agent-maininfo">Carrie Chen</p>
+          <p class="tm-agent-subinfo">Licensed Salesperson</p>
+        </div>
+        <div class="tm-agent-infoTwo">
+          <p class="tm-agent-subinfo">(917) 873-0443</p>
+          <p class="tm-agent-subinfo">carrie@newyorkmovesre.com</p>
         </div>
       </div>
     </div>
