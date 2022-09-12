@@ -6462,6 +6462,8 @@ iMac 27"           2560x1440 */
   width: 100%;
   margin-bottom: 8px;
   border-radius: 8px;
+  object-fit: contain;
+  background-color: #1a1a1a;
 }
 
 .dtd-pic-sub-cont {
@@ -6805,9 +6807,7 @@ iMac 27"           2560x1440 */
     height: 170px;
     margin-bottom: 2px;
     border-radius: 8px;
-
     background-image: url(images/CM_loadingspinner.24b933aa.gif);
-    background-color: #fff;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150px;
