@@ -6463,7 +6463,6 @@ iMac 27"           2560x1440 */
   margin-bottom: 8px;
   border-radius: 8px;
   object-fit: contain;
-  background-color: #1a1a1a;
 }
 
 .dtd-pic-sub-cont {
@@ -6808,6 +6807,7 @@ iMac 27"           2560x1440 */
     margin-bottom: 2px;
     border-radius: 8px;
     background-image: url(images/CM_loadingspinner.24b933aa.gif);
+    background-color: #c9c9c9;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150px;
@@ -7066,6 +7066,7 @@ iMac 27"           2560x1440 */
     height: 480px;
     margin-bottom: 8px;
     border-radius: 8px;
+    background-color: #1a1a1a;
   }
 
   .dtd-pic-sub-cont {
@@ -7506,11 +7507,17 @@ iMac 27"           2560x1440 */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.mb-card-img {
+.mb-card-img-cont {
   width: 110px;
   height: 110px;
   border-radius: 8px;
   margin-right: 8px;
+}
+
+.mb-card-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
   object-fit: cover;
   background-image: url(images/CM_loadingspinner.24b933aa.gif);
   background-color: #fff;

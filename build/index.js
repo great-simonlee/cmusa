@@ -1106,10 +1106,20 @@ if (window.location.pathname === '/mobile/') {
       // Mobile LS Disappear
       document.querySelector('#mobileFrontLoadingSpinnerDiv').style.display = 'none';
       res.docs.map(doc => {
+        let thumbnailPic;
+
+        if (doc.data().pictures.length != 1) {
+          thumbnailPic = doc.data().pictures[1];
+        } else {
+          thumbnailPic = doc.data().pictures[0];
+        }
+
         mobileListingCont.innerHTML += `
           <a class="mobileListingAnchor" href="/detail/?li=${doc.data().uid}${doc.data().writetime}">
             <div class="mb-card">
-              <img class="mb-card-img" src="https://drive.google.com/uc?export=view&id=${doc.data().pictures[0]}" alt="CMMobileListingImg">
+              <div class="mb-card-img-cont">
+                <img class="mb-card-img" src="https://drive.google.com/uc?export=view&id=${thumbnailPic}" alt="CMMobileListingImg">
+              </div>
               <div class="mb-card-desc">
                 <p class="mbc-desc-title">${doc.data().title}</p>
                 <p class="mbc-desc-content">个人转租 【JP 1b1b 客厅】 租金：1600/月 带家具 电网费自理 租期可议：4/7-8/7 <br> 地址：${doc.data().daddress}</p>
