@@ -147,19 +147,84 @@ if (window.location.pathname === '/detail/') {
         document.querySelectorAll('.detailBroker').forEach((el) => {
           el.innerHTML = res.data().broker;
         });
-        document.querySelector(
-          '#detailMainImg'
-        ).src = `https://drive.google.com/uc?export=view&id=${
-          res.data().pictures[0]
-        }`;
 
-        let picArray = [];
-        for (i = 0; i < res.data().pictures.length; i++) {
-          subImgCont.innerHTML += `<img class="dtd-pic-sub subImg" src="https://drive.google.com/uc?export=view&id=${
-            res.data().pictures[i]
-          }" alt="subImg${i}">`;
-          picArray.push(res.data().pictures[i]);
+        console.log(res.data().pictures.length);
+
+        if (res.data().pictures.length != 1) {
+          document.querySelector(
+            '#detailMainImg'
+          ).src = `https://drive.google.com/uc?export=view&id=${
+            res.data().pictures[1]
+          }`;
+
+          // let picArray = [];
+          for (i = 1; i < res.data().pictures.length; i++) {
+            subImgCont.innerHTML += `<img class="dtd-pic-sub subImg" src="https://drive.google.com/uc?export=view&id=${
+              res.data().pictures[i]
+            }" alt="subImg${i}">`;
+            // picArray.push(res.data().pictures[i]);
+          }
+        } else {
+          document.querySelector(
+            '#detailMainImg'
+          ).src = `https://drive.google.com/uc?export=view&id=${
+            res.data().pictures[0]
+          }`;
+
+          // let picArray = [];
+          for (i = 0; i < res.data().pictures.length; i++) {
+            subImgCont.innerHTML += `<img class="dtd-pic-sub subImg" src="https://drive.google.com/uc?export=view&id=${
+              res.data().pictures[i]
+            }" alt="subImg${i}">`;
+            // picArray.push(res.data().pictures[i]);
+          }
         }
+
+        // if (!res.data().mgmt) {
+        //   document.querySelector(
+        //     '#detailMainImg'
+        //   ).src = `https://drive.google.com/uc?export=view&id=${
+        //     res.data().pictures[0]
+        //   }`;
+
+        //   let picArray = [];
+        //   for (i = 0; i < res.data().pictures.length; i++) {
+        //     subImgCont.innerHTML += `<img class="dtd-pic-sub subImg" src="https://drive.google.com/uc?export=view&id=${
+        //       res.data().pictures[i]
+        //     }" alt="subImg${i}">`;
+        //     picArray.push(res.data().pictures[i]);
+        //   }
+        // } else {
+        //   console.log('this is cent prop');
+
+        //   const xhr = new XMLHttpRequest();
+        //   const JSONurl = `https://script.google.com/macros/s/AKfycby-PhLr60KvBz2Qqe5VZRGs7rEsOpPNlok0WjYnPP3qkWw5avrBoVBVy56AWZGONQTd/exec?ad=124ridgest&un=8`;
+        //   // const JSONurl = `https://script.google.com/macros/s/AKfycbwqMDaMXo2b6nY9FTsTHDjo9pTsFijQTC7DViMj7V7CUYxSFiFXS3lgBdHafe_-Lz02/exec?uid=${uid}&time=${time}`;
+        //   xhr.open('GET', JSONurl, true);
+        //   xhr.onload = function () {
+        //     const getResult = JSON.parse(xhr.responseText);
+        //     console.log(getResult);
+        //     // const picOrder = [];
+        //     // for (i = 0; i < getResult.length; i++) {
+        //     //   for (j = 0; j < getResult.length; j++) {
+        //     //     if (i == getResult[j].order) {
+        //     //       picOrder.push(getResult[j].path);
+        //     //     }
+        //     //   }
+        //     // }
+
+        //     document.querySelector(
+        //       '#detailMainImg'
+        //     ).src = `https://drive.google.com/uc?export=view&id=${getResult[0]}`;
+
+        //     // let picArray = [];
+        //     for (i = 0; i < getResult.length; i++) {
+        //       subImgCont.innerHTML += `<img class="dtd-pic-sub subImg" src="https://drive.google.com/uc?export=view&id=${getResult[i]}" alt="subImg${i}">`;
+        //       // picArray.push(getResult[i]);
+        //     }
+        //   };
+        //   xhr.send();
+        // }
 
         setTimeout(() => {
           const subImgs = document.querySelectorAll('.subImg');
@@ -170,7 +235,7 @@ if (window.location.pathname === '/detail/') {
               )}`;
             });
           });
-        }, 1000);
+        }, 2000);
 
         document.querySelectorAll('.detailLength').forEach((el) => {
           el.innerHTML = res.data().length;

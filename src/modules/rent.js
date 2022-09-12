@@ -48,15 +48,22 @@ if (window.location.pathname === '/rent/') {
         var objPropBed = obj.type[0] + ' Bedroom';
         var objPropBath = obj.type[2] + ' Bathroom';
       }
+
+      let thumbnailPic;
+
+      if (obj.pictures.length != 1) {
+        thumbnailPic = obj.pictures[1];
+      } else {
+        thumbnailPic = obj.pictures[0];
+      }
+
       listingContainer.innerHTML += `
         <a class="rlCoorEl" href="/detail/?li=${obj.uid}${
         obj.writetime
       }" target="blank">
           <div class="rl-card" data-coor="${obj.coordinate}">
             <div class="rl-card-cont">
-              <img class="rl-card-img" src="https://drive.google.com/uc?export=view&id=${
-                obj.pictures[0]
-              }">
+              <img class="rl-card-img" src="https://drive.google.com/uc?export=view&id=${thumbnailPic}">
               <div class="rl-card-info">
                 <div class="rlc-info-text">
                   <p>${objPropBed}</p>

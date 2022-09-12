@@ -134,27 +134,36 @@ if (window.location.pathname === '/mypage/') {
               });
             });
           });
-        userRef
-          .doc(uid)
-          .get()
-          .then((res) => {
-            const userEmailInput = document.querySelector('#mpEmail');
-            userEmailInput.style.color = '#fff';
-            userEmailInput.value = res.data().email;
-            userEmailInput.disabled = true;
-            const userName = document.querySelector('#mpUsername');
-            userName.style.color = '#fff';
-            userName.value = res.data().username;
-            userName.disabled = true;
-            const userPhone = document.querySelector('#mpPhone');
-            userPhone.style.color = '#fff';
-            userPhone.value = res.data().number;
-            userPhone.disabled = true;
-            const userWechat = document.querySelector('#mpWeixin');
-            userWechat.style.color = '#fff';
-            userWechat.value = res.data().wechat;
-            userWechat.disabled = true;
-          });
+
+        const userEmailInput = document.querySelector('#mpEmail');
+        userEmailInput.style.color = '#fff';
+        userEmailInput.value = user.email;
+        userEmailInput.disabled = true;
+        const userName = document.querySelector('#mpUsername');
+        userName.style.color = '#fff';
+        userName.value = user.displayName;
+        userName.disabled = true;
+        // userRef
+        //   .doc(uid)
+        //   .get()
+        //   .then((res) => {
+        //     const userEmailInput = document.querySelector('#mpEmail');
+        //     userEmailInput.style.color = '#fff';
+        //     userEmailInput.value = res.data().email;
+        //     userEmailInput.disabled = true;
+        //     const userName = document.querySelector('#mpUsername');
+        //     userName.style.color = '#fff';
+        //     userName.value = res.data().username;
+        //     userName.disabled = true;
+        //     const userPhone = document.querySelector('#mpPhone');
+        //     userPhone.style.color = '#fff';
+        //     userPhone.value = res.data().number;
+        //     userPhone.disabled = true;
+        //     const userWechat = document.querySelector('#mpWeixin');
+        //     userWechat.style.color = '#fff';
+        //     userWechat.value = res.data().wechat;
+        //     userWechat.disabled = true;
+        //   });
       }
     });
 

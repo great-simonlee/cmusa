@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="tm-agent-cont">
+    <!-- <div class="tm-agent-cont">
       <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/yiting.png') ?>" alt="">
       <div class="tm-agent-info">
         <div class="tm-agent-infoOne">
@@ -77,7 +77,7 @@
           <p class="tm-agent-subinfo">yiting@newyorkmovesre.com</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="tm-agent-cont">
       <img class="tm-agent-img" src="<?php echo get_theme_file_uri('/assets/img/agent/chole.png') ?>" alt="">
       <div class="tm-agent-info">

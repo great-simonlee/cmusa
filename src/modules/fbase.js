@@ -38,13 +38,16 @@ window.addEventListener('DOMContentLoaded', () => {
         userMenuDiv.style.display = 'none';
       });
 
-      if (window.location.pathname === '/member-login/') {
+      if (
+        window.location.pathname === '/member-login/' ||
+        window.location.pathname === '/member-signup/'
+      ) {
         backToMainPage();
       }
 
-      if (window.location.pathname === '/member-signup/') {
-        document.location.href = '/user-verify';
-      }
+      // if (window.location.pathname === '/member-signup/') {
+      //   document.location.href = '/user-verify';
+      // }
     } else {
       if (window.location.pathname === '/member-login/') {
         const logInEmail = document.querySelector('#logInEmail');
@@ -141,7 +144,8 @@ window.addEventListener('DOMContentLoaded', () => {
                       displayName: signUpUsername.value,
                     })
                     .then(() => {
-                      window.location = '/user-verify';
+                      backToMainPage();
+                      // window.location = '/user-verify';
                     });
                 })
                 .catch((err) => {
