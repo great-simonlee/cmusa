@@ -223,6 +223,7 @@
 
   .rl-card {
     display: flex;
+    margin-right: 24px;
     margin-bottom: 24px;
     transition: 100ms;
   }

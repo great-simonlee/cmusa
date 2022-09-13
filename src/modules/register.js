@@ -73,7 +73,7 @@ if (window.location.pathname === '/register/') {
               });
 
               const marker1 = new mapboxgl.Marker({
-                color: '#b40219',
+                color: '#f78915',
               })
                 .setLngLat(newPostingObj.coordinate)
                 .addTo(maptest);

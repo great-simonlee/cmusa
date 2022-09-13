@@ -22,7 +22,7 @@ if (window.location.pathname === '/rent/') {
     // Map marker generator
     const mapMarkerGenerator = (coor) => {
       const marker1 = new mapboxgl.Marker({
-        color: '#c9c9c9',
+        color: '#6c6c6c',
         scale: '0.7',
       })
         .setLngLat(coor)

@@ -1463,7 +1463,7 @@ if (window.location.pathname === '/register/') {
                 screenSpeed: 3
               });
               const marker1 = new mapboxgl.Marker({
-                color: '#b40219'
+                color: '#f78915'
               }).setLngLat(newPostingObj.coordinate).addTo(maptest);
 
               if (newPostingObj.coordinate != undefined) {
@@ -1708,7 +1708,7 @@ if (window.location.pathname === '/rent/') {
 
     const mapMarkerGenerator = coor => {
       const marker1 = new mapboxgl.Marker({
-        color: '#c9c9c9',
+        color: '#6c6c6c',
         scale: '0.7'
       }).setLngLat(coor).addTo(maplisting);
     }; // Making listings
