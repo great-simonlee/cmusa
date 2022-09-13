@@ -22,7 +22,7 @@ if (window.location.pathname === '/rent/') {
     // Map marker generator
     const mapMarkerGenerator = (coor) => {
       const marker1 = new mapboxgl.Marker({
-        color: '#f78915',
+        color: '#c9c9c9',
         scale: '0.7',
       })
         .setLngLat(coor)
@@ -90,12 +90,22 @@ if (window.location.pathname === '/rent/') {
     const mapHoverEffecter = () => {
       const rentListingCard = document.querySelectorAll('.rl-card');
       for (i = 0; i < rentListingCard.length; i++) {
+        const markerTarget = new mapboxgl.Marker({
+          color: '#f78915',
+          scale: '0.9',
+        });
         rentListingCard[i].addEventListener('mouseenter', (e) => {
           maplisting.flyTo({
             center: e.target.getAttribute('data-coor').split(','),
             essential: true,
             screenSpeed: 5,
           });
+          markerTarget
+            .setLngLat(e.target.getAttribute('data-coor').split(','))
+            .addTo(maplisting);
+        });
+        rentListingCard[i].addEventListener('mouseleave', (e) => {
+          markerTarget.addTo(maplisting).setLngLat([0, 0]).remove();
         });
       }
     };
