@@ -19,7 +19,7 @@ if (window.location.pathname === '/register/') {
         maptest.addControl(new mapboxgl.NavigationControl());
 
         const marker1 = new mapboxgl.Marker({
-          color: '#b40219',
+          color: '#f78915',
         })
           .setLngLat([121.5003576, 31.2185876])
           .addTo(maptest);

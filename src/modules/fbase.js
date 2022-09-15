@@ -126,34 +126,35 @@ window.addEventListener('DOMContentLoaded', () => {
         const signUpBtn = document.querySelector('#signUpBtn');
         signUpBtn.addEventListener('click', () => {
           console.log('Clicked');
-          if (signUpPassword.value != signUpPasswordCheck.value) {
-            window.alert('Please check the password again');
+          if (!signUpAgreement.checked) {
+            window.alert('Please check the user agreement');
           } else {
-            // Display the passwords are different
-            if (!signUpAgreement.checked) {
-              window.alert('Please check the user agreement');
-            } else {
-              auth
-                .createUserWithEmailAndPassword(
-                  signUpEmail.value,
-                  signUpPassword.value
-                )
-                .then((result) => {
-                  result.user
-                    .updateProfile({
-                      displayName: signUpUsername.value,
-                    })
-                    .then(() => {
-                      backToMainPage();
-                      // window.location = '/user-verify';
-                    });
-                })
-                .catch((err) => {
-                  window.alert(err.message);
-                });
-              console.log('Checked');
-            }
+            auth
+              .createUserWithEmailAndPassword(
+                signUpEmail.value,
+                signUpPassword.value
+              )
+              .then((result) => {
+                result.user
+                  // .updateProfile({
+                  //   displayName: signUpUsername.value,
+                  // })
+                  .then(() => {
+                    backToMainPage();
+                    // window.location = '/user-verify';
+                  });
+              })
+              .catch((err) => {
+                window.alert(err.message);
+              });
+            console.log('Checked');
           }
+          // if (signUpPassword.value != signUpPasswordCheck.value) {
+          //   window.alert('Please check the password again');
+          // } else {
+          //   // Display the passwords are different
+
+          // }
         });
       }
 

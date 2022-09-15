@@ -567,25 +567,26 @@ window.addEventListener('DOMContentLoaded', () => {
         signUpBtn.addEventListener('click', () => {
           console.log('Clicked');
 
-          if (signUpPassword.value != signUpPasswordCheck.value) {
-            window.alert('Please check the password again');
+          if (!signUpAgreement.checked) {
+            window.alert('Please check the user agreement');
           } else {
-            // Display the passwords are different
-            if (!signUpAgreement.checked) {
-              window.alert('Please check the user agreement');
-            } else {
-              auth.createUserWithEmailAndPassword(signUpEmail.value, signUpPassword.value).then(result => {
-                result.user.updateProfile({
-                  displayName: signUpUsername.value
-                }).then(() => {
-                  backToMainPage(); // window.location = '/user-verify';
-                });
-              }).catch(err => {
-                window.alert(err.message);
+            auth.createUserWithEmailAndPassword(signUpEmail.value, signUpPassword.value).then(result => {
+              result.user // .updateProfile({
+              //   displayName: signUpUsername.value,
+              // })
+              .then(() => {
+                backToMainPage(); // window.location = '/user-verify';
               });
-              console.log('Checked');
-            }
-          }
+            }).catch(err => {
+              window.alert(err.message);
+            });
+            console.log('Checked');
+          } // if (signUpPassword.value != signUpPasswordCheck.value) {
+          //   window.alert('Please check the password again');
+          // } else {
+          //   // Display the passwords are different
+          // }
+
         });
       }
 
@@ -1292,7 +1293,7 @@ if (window.location.pathname === '/mypage/') {
             el.addEventListener('click', () => {
               listingRef.doc(el.getAttribute('data-search')).delete().then(() => {
                 console.log('Successfully deleted');
-                location.reload();
+                window.location = '/mypage?mylist';
               }).catch(err => {
                 console.log(err);
               });
@@ -1418,7 +1419,7 @@ if (window.location.pathname === '/register/') {
         });
         maptest.addControl(new mapboxgl.NavigationControl());
         const marker1 = new mapboxgl.Marker({
-          color: '#b40219'
+          color: '#f78915'
         }).setLngLat([121.5003576, 31.2185876]).addTo(maptest);
         const newPostingObj = {
           features: [],

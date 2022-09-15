@@ -2,10 +2,10 @@
 <section class="mBody">
   <div class="mBody-cont">
     <h2>CHINA MOVES USA 官网</h2>
-    <div class="mBody-info">
+    <!-- <div class="mBody-info">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/user.png') ?>">  
       <input class="mBody-info-input" id="signUpUsername" type="text" placeholder="姓名">
-    </div>
+    </div> -->
     <div class="mBody-info">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/email.png') ?>">  
       <input class="mBody-info-input" id="signUpEmail" type="email" placeholder="邮箱">
@@ -14,10 +14,10 @@
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/lock.png') ?>">  
       <input class="mBody-info-input" id="signUpPassword" type="password" placeholder="密码">
     </div>
-    <div class="mBody-info">
+    <!-- <div class="mBody-info">
       <img class="mBody-info-icon" src="<?php echo get_theme_file_uri('/assets/img/icon/lock.png') ?>">  
       <input class="mBody-info-input" id="signUpPasswordCheck" type="password" placeholder="确认密码">
-    </div>
+    </div> -->
     <div>
       <label class="mBody-ua-container" for="userAgreement">
         <input type="checkbox" name="" id="userAgreement">

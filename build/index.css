@@ -3224,7 +3224,7 @@ footer {
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -3387,7 +3387,7 @@ footer {
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -3571,7 +3571,7 @@ footer {
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -3730,7 +3730,7 @@ footer {
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -4196,6 +4196,9 @@ iMac 27"           2560x1440 */
   position: relative;
   width: 100%;
   cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tm-banner-img {
@@ -4318,6 +4321,7 @@ iMac 27"           2560x1440 */
   }
   .tm-banner-container {
     width: 100vw;
+    height: 200px;
     /* margin-top: 91px; */
     /* height: 100px; */
   }
@@ -4391,10 +4395,10 @@ iMac 27"           2560x1440 */
 }
 /* Tablets */
 @media (min-width: 768px) {
-  .tm-banner-container {
+  /* .tm-banner-container {
     height: 600px;
     margin-top: 50px;
-  }
+  } */
   .tm-mb-cont {
     grid-template-columns: auto auto auto auto;
   }
@@ -4413,7 +4417,7 @@ iMac 27"           2560x1440 */
   }
 
   .tm-banner-container {
-    height: 350px;
+    height: 400px;
   }
 
   .tm-banner-img {
@@ -4504,7 +4508,7 @@ iMac 27"           2560x1440 */
 @media (min-width: 1024px) {
   .tm-banner-title {
     font-size: 64px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   .tm-subtitle {
@@ -4513,7 +4517,7 @@ iMac 27"           2560x1440 */
   }
 
   .tm-banner-container {
-    height: 450px;
+    height: 500px;
   }
 
   .tm-banner-img {
@@ -4618,7 +4622,7 @@ iMac 27"           2560x1440 */
   }
 
   .tm-ot {
-    padding: 48px 0;
+    padding-bottom: 96px;
   }
 
   .main-team-title {
@@ -5385,7 +5389,7 @@ iMac 27"           2560x1440 */
 }
 
 .reg-submit-btn {
-  font-weight: 100;
+  /* font-weight: 500; */
   background-color: #f68915;
   color: #fff;
   border: none;
@@ -5655,7 +5659,7 @@ iMac 27"           2560x1440 */
     width: 160px;
     height: 36px;
     border-radius: 18px;
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -5912,7 +5916,7 @@ iMac 27"           2560x1440 */
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -6149,7 +6153,7 @@ iMac 27"           2560x1440 */
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -6392,7 +6396,7 @@ iMac 27"           2560x1440 */
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -8084,7 +8088,7 @@ iMac 27"           2560x1440 */
   }
 
   .myp-card-img-desc {
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     font-size: 12px;
     padding: 6px 8px;
@@ -8251,7 +8255,7 @@ iMac 27"           2560x1440 */
   }
 
   .myp-card-img-desc {
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     font-size: 12px;
     padding: 6px 8px;

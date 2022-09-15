@@ -110,7 +110,7 @@
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -273,7 +273,7 @@
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -457,7 +457,7 @@
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {
@@ -616,7 +616,7 @@
   }
 
   .mBody-ua-container:hover .mBody-ua-checkmark {
-    background-color: #ccc;
+    background-color: transparent;
   }
 
   #userAgreement:checked + .mBody-ua-checkmark {

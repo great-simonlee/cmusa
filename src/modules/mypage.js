@@ -126,7 +126,7 @@ if (window.location.pathname === '/mypage/') {
                   .delete()
                   .then(() => {
                     console.log('Successfully deleted');
-                    location.reload();
+                    window.location = '/mypage?mylist';
                   })
                   .catch((err) => {
                     console.log(err);

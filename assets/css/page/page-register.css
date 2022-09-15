@@ -167,7 +167,7 @@
 }
 
 .reg-submit-btn {
-  font-weight: 100;
+  /* font-weight: 500; */
   background-color: #f68915;
   color: #fff;
   border: none;
@@ -437,7 +437,7 @@
     width: 160px;
     height: 36px;
     border-radius: 18px;
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -694,7 +694,7 @@
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -931,7 +931,7 @@
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
@@ -1174,7 +1174,7 @@
   }
 
   .reg-submit-btn {
-    font-weight: 100;
+    /* font-weight: 100; */
     background-color: #f68915;
     color: #fff;
     border: none;
