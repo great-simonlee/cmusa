@@ -206,7 +206,7 @@ if (window.location.pathname === '/rent/') {
       coorListing = [];
 
       fbQueryRef
-        // .orderBy(type, order) // OrderBy should be rewritten
+        .orderBy(type, order) // OrderBy should be rewritten
         .get()
         .then((res) => {
           document.querySelector('#loadingSpinnerDiv').style.display = 'none';
@@ -252,11 +252,72 @@ if (window.location.pathname === '/rent/') {
           // Insert pagination
           const totalNum = res.docs.length;
           const pageNum = Math.ceil(totalNum / 10);
-          for (i = 0; i < pageNum; i++) {
-            listingPagination.innerHTML += `<p class="page-number" data-page="${
-              i + 1
-            }">${i + 1}</p>`;
-          }
+
+          // START START // START START // START START // START START
+
+          // const pageNumController = (maxNum, first) => {
+          //   for (i = first; i < first + 7; i++) {
+          //     listingPagination.innerHTML += `<p class="page-number" data-page="${
+          //       i + 1
+          //     }">${i + 1}</p>`;
+          //   }
+          //   listingPagination.innerHTML += `<p style="margin: 0 16px;">...</p>`;
+          //   listingPagination.innerHTML += `<p class="page-number" data-page="${
+          //     maxNum + 1
+          //   }">${maxNum + 1}</p>`;
+
+          //   let totalPage = document.querySelectorAll('.page-number');
+          //   let pageArray = [...totalPage];
+
+          //   totalPage.forEach((page) => {
+          //     page.addEventListener('click', (e) => {
+          //       console.log(pageArray.indexOf(e.target));
+          //       console.log(parseInt(e.target.getAttribute('data-page')));
+          //       if (parseInt(e.target.getAttribute('data-page')) < 5) {
+          //         console.log('page remained');
+          //         listingPagination.innerHTML = '';
+          //         for (i = 0; i < 7; i++) {
+          //           listingPagination.innerHTML += `<p class="page-number" data-page="${
+          //             i + 1
+          //           }">${i + 1}</p>`;
+          //         }
+          //         listingPagination.innerHTML += `<p style="margin: 0 16px;">...</p>`;
+          //         listingPagination.innerHTML += `<p class="page-number" data-page="${
+          //           maxNum + 1
+          //         }">${maxNum + 1}</p>`;
+          //       } else if (
+          //         parseInt(e.target.getAttribute('data-page')) >= 5 ||
+          //         parseInt(e.target.getAttribute('data-page')) < maxNum - 5
+          //       ) {
+          //         console.log('page shrinked');
+          //       } else {
+          //         console.log('last number');
+          //       }
+          //     });
+          //   });
+          // };
+
+          // pageNumController(pageNum, 0);
+
+          // END END // END END // END END // END END // END END
+
+          const pageNumController = (maxNum, first) => {
+            listingPagination.innerHTML += `<p id="paginationFirst" style="display: none;">...</p>`;
+            for (i = first; i < maxNum; i++) {
+              listingPagination.innerHTML += `<p class="page-number" data-page="${
+                i + 1
+              }">${i + 1}</p>`;
+            }
+            listingPagination.innerHTML += `<p id="paginationLast" style="display: block;">...</p>`;
+          };
+
+          const allEleDisplayNone = (arr) => {
+            arr.forEach((el) => {
+              el.style.display = 'none';
+            });
+          };
+
+          pageNumController(pageNum, 0);
 
           // Pagination data call
           const totalPage = document.querySelectorAll('.page-number');
@@ -264,9 +325,49 @@ if (window.location.pathname === '/rent/') {
 
           // Listing refresher when pagination clicked
           totalPage.forEach((page) => {
+            const pageArray = [...totalPage];
+            for (i = 7; i < pageNum; i++) {
+              pageArray[i].style.display = 'none';
+            }
             // When the pagination is clicked
             page.addEventListener('click', (e) => {
               listingContainer.innerHTML = '';
+              // listingPagination.innerHTML = '';
+              allEleDisplayNone(pageArray);
+              console.log(parseInt(e.target.getAttribute('data-page')));
+
+              if (e.target.getAttribute('data-page') < 5) {
+                console.log('no changes');
+                for (j = 0; j < 7; j++) {
+                  pageArray[j].style.display = 'block';
+                }
+                document.querySelector('#paginationFirst').style.display =
+                  'none';
+                document.querySelector('#paginationLast').style.display =
+                  'block';
+              } else if (
+                e.target.getAttribute('data-page') >= 5 &&
+                e.target.getAttribute('data-page') < pageNum - 3
+              ) {
+                document.querySelector('#paginationFirst').style.display =
+                  'block';
+                document.querySelector('#paginationLast').style.display =
+                  'block';
+
+                let currentPage = parseInt(e.target.getAttribute('data-page'));
+                for (j = currentPage - 4; j < currentPage + 3; j++) {
+                  pageArray[j].style.display = 'block';
+                }
+              } else {
+                document.querySelector('#paginationFirst').style.display =
+                  'block';
+                document.querySelector('#paginationLast').style.display =
+                  'none';
+                for (j = pageNum - 7; j < pageNum; j++) {
+                  pageArray[j].style.display = 'block';
+                }
+              }
+
               totalPage.forEach((el) => {
                 el.style.color = '#fff';
               });
@@ -287,7 +388,6 @@ if (window.location.pathname === '/rent/') {
                 }
               }
 
-              e.target.style.color = '#f78915';
               dateOrderBtn.scrollIntoView();
               document
                 .querySelector('#rentMapContainer')
@@ -295,7 +395,7 @@ if (window.location.pathname === '/rent/') {
 
               mapHoverEffecter();
 
-              listingMove(document.querySelectorAll('.rlCoorEl').length);
+              // listingMove(document.querySelectorAll('.rlCoorEl').length);
             });
           });
         });

@@ -117,21 +117,25 @@ if (window.location.pathname === '/') {
 
     const NYlistingRef = db.collection('rentListing');
     const NYListingDiv = document.querySelector('#NYListingDiv');
-    NYlistingRef.orderBy('writetime', 'asc')
+    NYlistingRef.orderBy('writetime', 'desc')
       .limit(8)
       .get()
       .then((res) => {
         NYListingDiv.style.display = 'grid';
         res.docs.map((el) => {
+          let thumbnailPic;
+          if (!el.data().pictures[1]) {
+            thumbnailPic = el.data().pictures[0];
+          } else {
+            thumbnailPic = el.data().pictures[1];
+          }
           // console.log(el.data());
           NYListingDiv.innerHTML += `
             <a class="frontToListing" href="/detail/?li=${el.data().uid}${
             el.data().writetime
           }" target="blank">
               <div class="main-rent-card">
-                <img class="main-rent-img" src="https://drive.google.com/uc?export=view&id=${
-                  el.data().pictures[0]
-                }" alt="rentExample">
+                <img class="main-rent-img" src="https://drive.google.com/uc?export=view&id=${thumbnailPic}" alt="rentExample">
                 <div class="main-rent-info">
                   <div>
                     <p class="main-rent-title">${el.data().title}</p>
@@ -160,7 +164,7 @@ if (window.location.pathname === '/') {
           BOSListingDiv.innerHTML += `
             <div class="main-rent-card">
               <img class="main-rent-img" src="https://drive.google.com/uc?export=view&id=${
-                el.data().pictures[0]
+                el.data().pictures[1]
               }" alt="rentExample">
               <div class="main-rent-info">
                 <div>
